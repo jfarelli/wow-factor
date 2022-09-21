@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Form = ( { movies, displaySingleMovie } ) => {
+const Form = ( { movies, displaySingleMovie, randomize } ) => {
 
   const [ movieTitle, setMovieTitle ] = useState( '' )
 
@@ -27,9 +27,11 @@ const Form = ( { movies, displaySingleMovie } ) => {
 			
 			<div className="button-container">
         <Link to={`/`}>
-				<button className="home-button">Home</button>
+				  <button className="home-button">Home</button>
         </Link>
-				<button className="random-button">Random</button>
+        <Link to={`/details`}>
+				  <button className="random-button" onClick={randomize}>Random</button>
+        </Link>
 			</div>
 			<div className="dropdown-container">
         <Link to='/details'>

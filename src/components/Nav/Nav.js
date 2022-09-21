@@ -3,7 +3,7 @@ import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/ass
 import React from "react";
 import Form from "../Form/Form";
 
-const Nav = ( { movies, displaySingleMovie } ) => {
+const Nav = ( { movies, displaySingleMovie, randomize } ) => {
 
 
   return (
@@ -12,7 +12,7 @@ const Nav = ( { movies, displaySingleMovie } ) => {
       	<img src={ wilson } className="wilson-face" />
 				<div className="wow-bubble">Wooooooow!</div>
 			</div>
-			<Form movies={ movies } displaySingleMovie={ displaySingleMovie }/>
+			<Form movies={ movies } displaySingleMovie={ displaySingleMovie } randomize={ randomize }/>
     </div>
   );
 };

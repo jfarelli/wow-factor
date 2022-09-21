@@ -27,12 +27,18 @@ const App = ( ) => {
     } )
   }, [ ])
 
-
   const displaySingleMovie = ( timestamp ) => {
     const moviePick = movies.find( movie => movie.timestamp === timestamp )
     setSingleMovie( moviePick )
     // console.log('MOVIE PICK: ', moviePick)
   }
+
+  const randomize = () => {
+    const getRandom =
+      movies[Math.floor(Math.random() * movies.length)];
+    // console.log('MOVIES: ', movies)
+    setSingleMovie(getRandom)
+  };
   
 
   return (
@@ -41,7 +47,7 @@ const App = ( ) => {
         <Route exact path='/' render={( ) =>  <LandingPage /> }/>
       </Switch>
 
-        <Nav movies={ movies } displaySingleMovie={ displaySingleMovie }/>
+        <Nav movies={ movies } displaySingleMovie={ displaySingleMovie } randomize={ randomize }/>
       <Switch>
         
         <Route exact path='/details' render={ ( ) => <MovieDetails movie={ singleMovie } videos={ videos }/> } />
