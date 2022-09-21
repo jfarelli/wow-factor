@@ -26,7 +26,9 @@ const Form = ( { movies, displaySingleMovie } ) => {
 		<form>
 			
 			<div className="button-container">
+        <Link to={`/`}>
 				<button className="home-button">Home</button>
+        </Link>
 				<button className="random-button">Random</button>
 			</div>
 			<div className="dropdown-container">

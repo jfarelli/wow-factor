@@ -40,7 +40,7 @@ const App = ( ) => {
       <Switch>
         <Route exact path='/' render={( ) =>  <LandingPage /> }/>
       </Switch>
-      
+
         <Nav movies={ movies } displaySingleMovie={ displaySingleMovie }/>
       <Switch>
         
