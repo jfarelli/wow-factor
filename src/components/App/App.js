@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import MovieDetails from '../MovieDetails/MovieDetails';
+import LandingPage from '../LandingPage/LandingPage';
 import fetchWows from '../../apiCalls';
 import { useEffect, useState } from 'react';
 import { Switch, Route } from "react-router-dom";
@@ -30,20 +31,26 @@ const App = ( ) => {
   const displaySingleMovie = ( timestamp ) => {
     const moviePick = movies.find( movie => movie.timestamp === timestamp )
     setSingleMovie( moviePick )
-    console.log('MOVIE PICK: ', moviePick)
+    // console.log('MOVIE PICK: ', moviePick)
   }
   
 
   return (
     <div className="App">
-
-      <Nav movies={ movies } displaySingleMovie={ displaySingleMovie }/>
       <Switch>
-        <Route path='/details' render={ ( ) => <MovieDetails movie={ singleMovie } videos={ videos }/> } />
-
-        <Route path='/movies' render={ ( ) => <MovieContainer movies={ movies } displaySingleMovie={ displaySingleMovie } /> } />
+        <Route exact path='/' render={( ) =>  <LandingPage /> }/>
       </Switch>
-      <Footer />
+      
+        <Nav movies={ movies } displaySingleMovie={ displaySingleMovie }/>
+      <Switch>
+        
+        <Route exact path='/details' render={ ( ) => <MovieDetails movie={ singleMovie } videos={ videos }/> } />
+
+        <Route exact path='/movies' render={ ( ) => <MovieContainer movies={ movies } displaySingleMovie={ displaySingleMovie } /> } />
+        
+      </Switch>
+        <Footer />
+
     </div>
   );
 }

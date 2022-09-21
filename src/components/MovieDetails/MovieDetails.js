@@ -1,7 +1,6 @@
 import './MovieDetails.css'
 import React from 'react'
 // import oval from '../../assets/oval.svg'
-import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson.jpeg";
 
 const MovieDetails = ( { movie, videos } ) => {
     // console.log('MOVIES: ', movies)
