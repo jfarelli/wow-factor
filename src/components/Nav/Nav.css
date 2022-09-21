@@ -15,11 +15,9 @@
 }
 
 .wilson-face {
-  height: 80%;
-  /* width: 20%; */
+  height: 100%;
   border-radius: 50px;
   margin-left: 0.5%;
-  margin-top:7%;
   /* box-shadow: 0 0 25px rgb(0, 0, 0); */
 }
 
@@ -29,10 +27,10 @@
   justify-content: center;
   background-color: whitesmoke;
   height: 1.5em;
-  width: 7em;
-  margin-bottom: 12.5%;
+  width: 7.5em;
+  margin-bottom: 7%;
   margin-left: 1.5%;
-  border-radius: 0.5em 0.5em 0.5em 0;
+  border-radius: 0.5em;
   font-size: 2.25em;
   /* border: 1px solid black; */
   box-shadow: 3px 3px 5px 3px black;

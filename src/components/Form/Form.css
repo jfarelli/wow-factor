@@ -22,7 +22,7 @@ form {
   border: none;
   font-size: 0.75em;
   cursor: pointer;
-background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .dropdown-container {
@@ -45,4 +45,5 @@ background-color: whitesmoke;
   border: none;
   text-align: center;
   background-color: whitesmoke;
+  cursor: pointer;
 }

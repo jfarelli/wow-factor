@@ -8,7 +8,7 @@ const Nav = ( ) => {
     <div className="nav-container">
 			<div className="wilson-face-and-bubble-container">
       	<img src={ wilson } className="wilson-face" />
-				<div className="wow-bubble">Woooooow!</div>
+				<div className="wow-bubble">Wooooooow!</div>
 			</div>
 			<Form />
     </div>

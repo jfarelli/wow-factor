@@ -1,0 +1,25 @@
+.movie-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid green;
+  height: 100vh;
+  width: 100%;
+}
+
+.movie-poster {
+  height: 38em;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px 2px rgba( 0, 0, 0, 0.7 );
+}
+
+.poster-img {
+  height: 38em;
+  width: 100%;
+}
+
+.trailer-and-details-container {
+  border: 1px solid blue;
+  height: 100%;
+  width: 50%;
+}
