@@ -3,14 +3,16 @@ import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/ass
 import React from "react";
 import Form from "../Form/Form";
 
-const Nav = ( ) => {
+const Nav = ( { movies, displaySingleMovie } ) => {
+
+
   return (
     <div className="nav-container">
 			<div className="wilson-face-and-bubble-container">
       	<img src={ wilson } className="wilson-face" />
 				<div className="wow-bubble">Wooooooow!</div>
 			</div>
-			<Form />
+			<Form movies={ movies } displaySingleMovie={ displaySingleMovie }/>
     </div>
   );
 };

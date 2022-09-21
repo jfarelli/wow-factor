@@ -1,25 +1,38 @@
+iframe {
+  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);  
+  border-radius: 10px;
+}
+
+p {
+  margin: 5px;
+}
+
 .movie-details-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 3px solid green;
-  height: 100vh;
+  padding: 2%;
+  height: 100%;
   width: 100%;
-}
-
-.movie-poster {
-  height: 38em;
-    border-radius: 10px;
-    box-shadow: 0 1px 15px 2px rgba( 0, 0, 0, 0.7 );
 }
 
 .poster-img {
-  height: 38em;
-  width: 100%;
+  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  height: 30em;
 }
 
 .trailer-and-details-container {
-  border: 1px solid blue;
-  height: 100%;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-details {
+  text-align: center;
+  background-color: #C2B280;
+  width: 60%;
+  margin-top: 1%;
+  border-radius: 10px;
+  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
 }

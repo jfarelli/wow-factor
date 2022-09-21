@@ -2,25 +2,26 @@ import './MovieContainer.css'
 import React from 'react'
 import SingleMovie from '../SingleMovie/SingleMovie'
 
-const MovieContainer = ( { movies, videos } ) => {
+const MovieContainer = ( { movies, videos, displaySingleMovie } ) => {
 
-    const sortedMovies = movies.sort( ( a, b ) => b.year - a.year )
+    const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
 
-    const wowCards = sortedMovies.map( wow => {
+    const movieCards = sortedMovies.map( movie => {
         return ( 
             <SingleMovie 
-                id={ wow.timestamp }
-                key={ wow.timestamp }
-                title={ wow.movie }
-                poster={ wow.poster }
+                id={ movie.timestamp }
+                key={ movie.timestamp }
+                title={ movie.movie }
+                poster={ movie.poster }
                 videos={ videos }
+                displaySingleMovie={ displaySingleMovie }
                 />
         )
     } )
        
   return (
     <div className='movie-card-collection'>
-      { wowCards }
+      { movieCards }
     </div>
   )
 }
