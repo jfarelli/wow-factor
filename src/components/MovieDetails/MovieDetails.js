@@ -6,8 +6,10 @@ const MovieDetails = ( { movie, videos } ) => {
     // console.log('MOVIES: ', movies)
     // console.log('VIDEOS[0]: ', videos[0])
   // return movies.map( movie => {
-  
+  // console.log('MOVIE: ', movie)
   return (
+    // if movie doesn't exist, show loading screen
+    // else do the below
     <div className='movie-details-container' key={ movie.timestamp }>
       <img src={movie.poster} className='poster-img'/>
       <div className='trailer-and-details-container'>

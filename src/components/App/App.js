@@ -13,6 +13,10 @@ const App = ( ) => {
   const [ movies, setMovies ] = useState( [ ] );
   const [ videos, setVideos ] = useState( [ ] );
   const [ singleMovie, setSingleMovie ] = useState( [ ] );
+  const [ wows, setWows ] = useState( [ ] );
+
+  const [search, setSearch] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   
 
  useEffect( ( ) => {
@@ -25,40 +29,92 @@ const App = ( ) => {
       const movieClips = unique.map( movie => movie.video );
       setVideos( movieClips );
     } )
-  }, [ ])
+
+    const filteredResults = movies.filter((movie) =>
+          ((movie.movie).toUpperCase()).includes(search.toUpperCase()))
+          // || ((movie.title).toLowerCase()).includes(search.toLowerCase()));
+
+        setSearchResults(filteredResults.reverse());
+    
+        console.log('SEARCH RESULTS: ', filteredResults)
+  }, [  ])
 
   const displaySingleMovie = ( timestamp ) => {
     const moviePick = movies.find( movie => movie.timestamp === timestamp )
     setSingleMovie( moviePick )
-    // console.log('MOVIE PICK: ', moviePick)
   }
 
   const randomize = () => {
     const getRandom =
       movies[Math.floor(Math.random() * movies.length)];
-    // console.log('MOVIES: ', movies)
-    setSingleMovie(getRandom)
+    setSingleMovie( getRandom )
   };
-  
 
+  const displayWowCount = ( wowCount ) => {
+    let wowPicks = movies.filter( movie => movie.total_wows_in_movie === parseInt( wowCount ) )
+    console.log('WOWPICKS: ', wowPicks)
+    setWows( wowPicks );
+
+  }
+
+
+
+  
   return (
     <div className="App">
       <Switch>
-        <Route exact path='/' render={( ) =>  <LandingPage /> }/>
+        <Route exact path='/' render={ ( ) =>  <LandingPage /> }/>
       </Switch>
+      
+        <Nav 
+          movies={ movies } 
+          displaySingleMovie={ displaySingleMovie }  
+          displayWowCount={ displayWowCount } 
+          randomize={ randomize }
+          search={search} 
+          setSearch={setSearch}/>
 
-        <Nav movies={ movies } displaySingleMovie={ displaySingleMovie } randomize={ randomize }/>
       <Switch>
-        
+        <Route exact path='/movies' render={ ( ) => <MovieContainer movies={ movies } wows={ wows } displaySingleMovie={ displaySingleMovie } searchResults={ searchResults } /> } />
         <Route exact path='/details' render={ ( ) => <MovieDetails movie={ singleMovie } videos={ videos }/> } />
-
-        <Route exact path='/movies' render={ ( ) => <MovieContainer movies={ movies } displaySingleMovie={ displaySingleMovie } /> } />
-        
       </Switch>
         <Footer />
+
 
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const handleInput = (event) => {
+//   const results = movies.filter((movie) => movie.movie.toLowerCase().includes(event.target.value.toLowerCase())) 
+//   setMovies( results )
+// };
