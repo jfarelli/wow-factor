@@ -14,8 +14,8 @@ const Nav = ({
   // dropdown,
   wows,
   // setMovies,
+  singleMovie
 }) => {
-  // console.log('DIS SING: ', setMovies)
   return (
     <div className="nav-container">
       <div className="wilson-face-and-bubble-container">
@@ -32,6 +32,7 @@ const Nav = ({
         // dropdown={dropdown}
         wows={wows}
         // setMovies={setMovies}
+        singleMovie={singleMovie}
       />
     </div>
   );

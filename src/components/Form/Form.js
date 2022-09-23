@@ -9,11 +9,13 @@ const Form = ({
   randomize,
   displayWowCount,
   // setMovies,
-  // wows,
+  wows,
   // search,
   // setSearch,
+  singleMovie
 }) => {
-  // console.log('SEARCH: ', search)
+  console.log('MOVIES: ', movies)
+  console.log('WOWS: ', wows)
   const sortedMovies = movies.sort((a, b) => b.year - a.year);
   const dropdownTitles = sortedMovies.map((movie) => {
     return (
@@ -37,6 +39,7 @@ const Form = ({
     // e.preventDefault();
     displayWowCount(e.target.value);
   };
+  console.log('SINGLEMOVIE: ', singleMovie)
 
   return (
     <form>
@@ -58,7 +61,7 @@ const Form = ({
           placeholder="Search Movies"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/> */}
-        {!movies.length ? (
+        {singleMovie ? (
           <Link to="/details">
             <select
               onChange={handleMovieChange}
@@ -68,7 +71,7 @@ const Form = ({
               {dropdownTitles}
             </select>
           </Link>
-        ) : (
+        ) :  (
           <Link to="/movies">
             <select
               onChange={handleWowChange}
@@ -85,7 +88,7 @@ const Form = ({
               <option value="10">10</option>
             </select>
           </Link>
-        )}
+        ) }
       </div>
     </form>
   );

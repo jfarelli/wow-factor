@@ -12,7 +12,7 @@ import { Switch, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [videos, setVideos] = useState([]);
-  const [singleMovie, setSingleMovie] = useState([]);
+  const [singleMovie, setSingleMovie] = useState('');
   const [wows, setWows] = useState([]);
   // const [ dropdown, setDropdown ] = useState( true );
   // const [search, setSearch] = useState('');
@@ -35,12 +35,12 @@ const App = () => {
 
     //     setSearchResults(filteredResults.reverse());
 
-    //     console.log('SEARCH RESULTS: ', filteredResults)
   }, []);
 
   const displaySingleMovie = (timestamp) => {
     const moviePick = movies.find((movie) => movie.timestamp === timestamp);
     setSingleMovie(moviePick);
+
   };
 
   const randomize = () => {
@@ -52,7 +52,6 @@ const App = () => {
     let wowPicks = movies.filter(
       (movie) => movie.total_wows_in_movie === parseInt(wowCount)
     );
-    console.log("WOWPICKS: ", wowPicks);
     setWows(wowPicks);
   };
 
@@ -70,11 +69,8 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => <LandingPage movies={movies} setMovies={setMovies} />}
+          render={() => <LandingPage singleMovie={singleMovie} setWows={setWows} />}
         />
-      </Switch>
-
-      <Switch>
         <Route
           exact
           path="/movies"
@@ -89,6 +85,7 @@ const App = () => {
                 // setSearch={setSearch}
                 wows={wows}
                 setMovies={setMovies}
+                setSingleMovie={setSingleMovie}
               />
               <MovieContainer
                 movies={movies}
@@ -113,6 +110,7 @@ const App = () => {
                 // setSearch={setSearch}
                 wows={wows}
                 setMovies={setMovies}
+                singleMovie={singleMovie}
               />
               <MovieDetails movie={singleMovie} videos={videos} />
             </div>

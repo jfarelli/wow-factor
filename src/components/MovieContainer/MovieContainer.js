@@ -11,8 +11,8 @@ const MovieContainer = ({
   displaySingleMovie,
   // searchResults,
 }) => {
-  console.log("MOVIES: ", movies);
-  console.log("WOWS: ", wows);
+  // console.log("MOVIES: ", movies);
+  // console.log("WOWS: ", wows);
   const sortedMovies = movies.sort((a, b) => b.year - a.year);
 
   const movieCards = !wows.length

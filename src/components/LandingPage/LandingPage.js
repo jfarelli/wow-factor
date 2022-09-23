@@ -4,10 +4,14 @@ import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/ass
 import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types'
 
-const LandingPage = (  ) => {
-  // {  movies }
+const LandingPage = ( {  setSingleMovie, setWows } ) => {
+  // // 
   // const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
-  // onClick={setMovies(sortedMovies)}
+  // // onClick={setMovies(sortedMovies)}
+  const handleClick = ( ) => {
+    setWows([])
+    setSingleMovie('')
+  }
 
   return (
     <div className='landing-page-container'>
@@ -17,7 +21,7 @@ const LandingPage = (  ) => {
 			</div>
       <div className='container-for-button'>
       <Link to={`/movies`}>
-        <button className='go-to-movies-button' >Show Me The Wilson</button>
+        <button className='go-to-movies-button' onClick={handleClick}>Show Me The Wilson</button>
       </Link>
       </div>
     </div>
