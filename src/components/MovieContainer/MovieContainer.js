@@ -27,6 +27,7 @@ const MovieContainer = ({
             displaySingleMovie={displaySingleMovie}
           />
         );
+        // Swiper functionality for dynamic movie display
       })
     : // : !wows.length ? (
       //   searchResults.map( movie => {

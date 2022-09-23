@@ -1,0 +1,102 @@
+[
+  {
+    "movie": "Drillbit Taylor",
+    "year": 2008,
+    "release_date": "2008-03-21",
+    "director": "Steven Brill",
+    "character": "Drillbit Taylor",
+    "movie_duration": "01:50:10",
+    "timestamp": "00:36:48",
+    "full_line": "Wow, one of you really charley-horsed me.",
+    "current_wow_in_movie": 2,
+    "total_wows_in_movie": 2,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/6GNViJjFw8uVr4YWAIqfDp/a2508829eb231ebc2aa2a147518eaf0c/Drillbit_Taylor_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/1BbH07V4BqkyhZsZG8jiZe/4103a9f89ec0f5fe0f04735852eef72f/Drillbit_Taylor_Wow_2_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/6snDllPeq8TPrhJVbNwZZv/27ad5664b55ed34e32928d61a793b2a9/Drillbit_Taylor_Wow_2_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/4Bqx3uUnimoIAQoqWQzeJe/735b4a5168aa40affbfdd834d7763f41/Drillbit_Taylor_Wow_2_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/1c0aqNqI3K45537SruhSFu/24eb5f4695e398c8fa52d0541c65ef50/Drillbit_Taylor_Wow_2_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/4vVNjLxlYTxHIFDxI4Q9M2/7dbf49fc47ab688a0aa133a453e43a3d/Drillbit_Taylor_Wow_2.mp3"
+  },
+  {
+    "movie": "Cars",
+    "year": 2006,
+    "release_date": "2006-06-09",
+    "director": "John Lasseter",
+    "character": "Lightning McQueen",
+    "movie_duration": "01:56:36",
+    "timestamp": "01:23:13",
+    "full_line": "Wow, you were right!",
+    "current_wow_in_movie": 4,
+    "total_wows_in_movie": 5,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/6dsHUil72TJLYqbwYMEjH4/387a2d9994a2f1fb069d970a0f30ba32/Cars_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/5WH68GXLSVdosuz0ouwFDF/0b55b456669a8bf8a13e6aecd46cae89/Cars_Wow_4_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/7KSwlI2izHJDNtiGAH32SU/7d7698ac27be72753ddc1e2291399b46/Cars_Wow_4_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/6OExsgI6VJHXcjNZtlqBkx/3152bd6700486416ec0b818829de9374/Cars_Wow_4_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/2ibZvAYOWwmoqQtANL3d8o/9c09f29a7f42ecd996ac991b52b2cc65/Cars_Wow_4_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/iJ5LIuyc3pmvEAaiSVSLS/85e36dc0324b28549ea56a6882a03062/Cars_Wow_4.mp3"
+  },
+  {
+    "movie": "Cars",
+    "year": 2006,
+    "release_date": "2006-06-09",
+    "director": "John Lasseter",
+    "character": "Lightning McQueen",
+    "movie_duration": "01:56:36",
+    "timestamp": "00:14:12",
+    "full_line": "Wow! Look at that shine!",
+    "current_wow_in_movie": 1,
+    "total_wows_in_movie": 5,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/6dsHUil72TJLYqbwYMEjH4/387a2d9994a2f1fb069d970a0f30ba32/Cars_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/5DJiY3IWvjHjmfFT6mHWTE/63ad47ecaa6e65c094000175783f749e/Cars_Wow_1_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/5lhTTAmEIN8I5S1i7MTVg7/6747465a53447c24c82272e8438ec3ba/Cars_Wow_1_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/6S9OEenSTv0KCwfsVKSU1D/5f1fa3b78d5e32614e3c0268be046a8a/Cars_Wow_1_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/53WsapSnF3QVs8mVmrtcGv/206095859241881bbd5c3add0c5b980a/Cars_Wow_1_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/5wTwFaxcgg9E4QIwUXTJK4/9fbcc04e27d5860c9bf3febf72c9f20d/Cars_Wow_1.mp3"
+  },
+  {
+    "movie": "Shanghai Knights",
+    "year": 2003,
+    "release_date": "2003-02-03",
+    "director": "David Dobkin",
+    "character": "Roy O'Bannon",
+    "movie_duration": "01:54:21",
+    "timestamp": "01:36:17",
+    "full_line": "Hey, I can see our hotel from here! Wow.",
+    "current_wow_in_movie": 3,
+    "total_wows_in_movie": 4,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/4pb4EMrNtfK3x9PyTMLcGl/bd4d6db24a4247b0f33211eeb882c26a/Shanghai_Knights_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/1Astr9fayq6pkeVYJmdBVU/9e04fa628af74c800e7f43f7a9e0d2e7/Shanghai_Knights_Wow_3_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/qBYwhnty0x84phmWdja6a/3e850e18d50292c991c7a4a6c6ff46c6/Shanghai_Knights_Wow_3_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/13KD5BugQh9PFuVnlg1Tz0/aff15774860e37ef1dd99d796eb19da5/Shanghai_Knights_Wow_3_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/5p6Aw1VCGpcwLN6zjlEKfD/dced95d07ad71e391c85a712e6ea90b9/Shanghai_Knights_Wow_3_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/6BOieQV4K46p9nm7rFc7eG/cc7465cb72c8fb48ee9fc6b82470d1fd/Shanghai_Knights_Wow_3.mp3"
+  },
+  {
+    "movie": "Cars 3",
+    "year": 2017,
+    "release_date": "2017-05-23",
+    "director": "Brian Fee",
+    "character": "Lighting McQueen",
+    "movie_duration": "01:42:25",
+    "timestamp": "00:25:10",
+    "full_line": "Oh, hey, Mr. Sterling. Wow.",
+    "current_wow_in_movie": 3,
+    "total_wows_in_movie": 10,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/43fOBsgY8iOJL0dijvFnfl/ea361efc5131a859c173ab5dd3fdfe1e/Cars_3_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/MwAHRe21gYt7qgtQqQSgi/20188401d4ae548db5c4f861fad96f49/Cars_3_Wow_3_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/7dL6LdSOmZ2mbXgdi4KeZl/6fe6efef423d28e5704637658a3650ec/Cars_3_Wow_3_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/7uciNXhLeVXBByZu8ipAr4/5bcae43dde19fa0bb249e9318953ba09/Cars_3_Wow_3_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/KL91bYDqfWVeK6NdaXh1O/f1baca7b2988a2e5853256be5f9e2c89/Cars_3_Wow_3_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/6PlYbs7cO3iXEEM1szcfHZ/bf10fba861c8e0d2c20ac4714974bde1/Cars_3_Wow_3.mp3"
+  }
+]
