@@ -2,10 +2,12 @@ import './LandingPage.css'
 import React from 'react'
 import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson.jpeg";
 import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types'
 
-const LandingPage = ( {  movies, setMovies } ) => {
-
-  const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
+const LandingPage = (  ) => {
+  // {  movies }
+  // const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
+  // onClick={setMovies(sortedMovies)}
 
   return (
     <div className='landing-page-container'>
@@ -15,7 +17,7 @@ const LandingPage = ( {  movies, setMovies } ) => {
 			</div>
       <div className='container-for-button'>
       <Link to={`/movies`}>
-        <button className='go-to-movies-button' onClick={setMovies([])}>Show Me The Wilson</button>
+        <button className='go-to-movies-button' >Show Me The Wilson</button>
       </Link>
       </div>
     </div>
@@ -23,3 +25,23 @@ const LandingPage = ( {  movies, setMovies } ) => {
 }
 
 export default LandingPage
+
+// LandingPage.propTypes = {
+//   movies: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       audio: PropTypes.string.isRequired, 
+//       character: PropTypes.string.isRequired,
+//       current_wow_in_movie: PropTypes.number.isRequired,
+//       director: PropTypes.string.isRequired,
+//       full_line: PropTypes.string.isRequired,
+//       movie: PropTypes.string.isRequired,
+//       movie_duration: PropTypes.string.isRequired,
+//       poster: PropTypes.string.isRequired,
+//       release_date: PropTypes.string.isRequired,
+//       timestamp: PropTypes.string.isRequired,
+//       total_wows_in_movie: PropTypes.number.isRequired,
+//       video: PropTypes.object.isRequired,
+//       year: PropTypes.number.isRequired,
+//     })
+//   ),
+// };

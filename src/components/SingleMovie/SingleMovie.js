@@ -1,8 +1,15 @@
 import "./SingleMovie.css";
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const SingleMovie = ( { id, title, videos, poster, displaySingleMovie } ) => {
+const SingleMovie = ({ 
+  id, 
+  title, 
+  // videos, 
+  poster, 
+  displaySingleMovie 
+}) => {
   return (
     <div className="single-movie-container">
       <Link to={`/details`}>
@@ -12,7 +19,7 @@ const SingleMovie = ( { id, title, videos, poster, displaySingleMovie } ) => {
           src={poster}
           alt={`Movie poster for ${title}`}
           className="single-card-image"
-          onClick={ ( ) => displaySingleMovie( id ) }
+          onClick={() => displaySingleMovie(id)}
         />
       </Link>
     </div>
@@ -20,3 +27,11 @@ const SingleMovie = ( { id, title, videos, poster, displaySingleMovie } ) => {
 };
 
 export default SingleMovie;
+
+SingleMovie.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  // videos: PropTypes.array.isRequired,
+  poster: PropTypes.string.isRequired,
+  displaySingleMovie: PropTypes.func.isRequired
+};

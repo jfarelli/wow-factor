@@ -1,36 +1,48 @@
-import './MovieDetails.css'
-import React from 'react'
-// import oval from '../../assets/oval.svg'
+import "./MovieDetails.css";
+import React from "react";
+import PropTypes from "prop-types";
 
-const MovieDetails = ( { movie, videos } ) => {
-    // console.log('MOVIES: ', movies)
-    // console.log('VIDEOS[0]: ', videos[0])
-  // return movies.map( movie => {
-  // console.log('MOVIE: ', movie)
+const MovieDetails = ({ movie }) => {
   return (
-    // if movie doesn't exist, show loading screen
-    // else do the below
-    <div className='movie-details-container' key={ movie.timestamp }>
-      <img src={movie.poster} className='poster-img'/>
-      <div className='trailer-and-details-container'>
+    <div className="movie-details-container" key={movie.timestamp}>
+      <img src={movie.poster} className="poster-img" />
+      <div className="trailer-and-details-container">
         <iframe
-          src={ movie.video['1080p'] }
+          src={movie.video["1080p"]}
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           title="YouTube Video"
           width="640"
-          height="360"/>
-        <div className='movie-details'>
-            <p>Character: { movie.character }</p>
-            <p>Line: "{ movie.full_line }"</p>
-            <p>'Wow' Count at Clip: { movie.current_wow_in_movie }</p>
-            <p>Total 'Wow' Count in Movie: { movie.total_wows_in_movie }</p>
+          height="360"
+        />
+        <div className="movie-details">
+          <p>Character: {movie.character}</p>
+          <p>Line: "{movie.full_line}"</p>
+          <p>'Wow' Count at Clip: {movie.current_wow_in_movie}</p>
+          <p>Total 'Wow' Count in Movie: {movie.total_wows_in_movie}</p>
         </div>
       </div>
     </div>
-  )
-// } )
-}
+  );
+};
 
-export default MovieDetails
+export default MovieDetails;
+
+MovieDetails.propTypes = {
+  movie: PropTypes.shape({
+    audio: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+    current_wow_in_movie: PropTypes.number.isRequired,
+    director: PropTypes.string.isRequired,
+    full_line: PropTypes.string.isRequired,
+    movie: PropTypes.string.isRequired,
+    movie_duration: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    total_wows_in_movie: PropTypes.number.isRequired,
+    video: PropTypes.object.isRequired,
+    year: PropTypes.number.isRequired,
+  }),
+};
