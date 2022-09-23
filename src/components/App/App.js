@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import MovieContainer from "../MovieContainer/MovieContainer";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import LandingPage from "../LandingPage/LandingPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 import fetchWows from "../../apiCalls";
 import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
@@ -114,6 +115,14 @@ const App = () => {
                 setMovies={setMovies}
               />
               <MovieDetails movie={singleMovie} videos={videos} />
+            </div>
+          )}
+        />
+        <Route
+          path="*"
+          render={() => (
+            <div>
+              <ErrorPage />
             </div>
           )}
         />
