@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Form = ( { movies, displaySingleMovie, randomize,  displayWowCount, search, setSearch } ) => {
-  console.log('SEARCH: ', search)
-  // console.log('SETSEARCH: ', setSearch)
+const Form = ( { movies, displaySingleMovie, randomize,  displayWowCount, setMovies, search, wows, setSearch } ) => {
+  // console.log('SEARCH: ', search)
   const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
   const dropdownTitles = sortedMovies.map( movie => {
     return (
@@ -46,6 +45,7 @@ const Form = ( { movies, displaySingleMovie, randomize,  displayWowCount, search
           placeholder="Search Movies"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/> */}
+          { !movies.length ? (
         <Link to='/details'>
           <select 
             onChange={ handleMovieChange }  
@@ -55,7 +55,7 @@ const Form = ( { movies, displaySingleMovie, randomize,  displayWowCount, search
             </option>
             { dropdownTitles }
             </select>
-          </Link>
+          </Link> ) : (
           <Link to='/movies'>
           <select onChange={ handleWowChange } className='wow-count-dropdown' placeholder='Choose "WOW" Count'>
             <option value=""> 
@@ -69,7 +69,7 @@ const Form = ( { movies, displaySingleMovie, randomize,  displayWowCount, search
               <option value='6'>6</option>
               <option value='10'>10</option>
           </select>
-          </Link>
+          </Link> ) }
 			</div>
 
 		</form>

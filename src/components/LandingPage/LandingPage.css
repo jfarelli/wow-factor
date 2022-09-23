@@ -6,6 +6,7 @@
   height: 100vh;
   background-color: #C2B280;
   padding: 0.5%;
+  overflow:hidden;
 }
 
 .face-and-bubble-container {

@@ -3,7 +3,10 @@ import React from 'react'
 import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson.jpeg";
 import { Link } from 'react-router-dom';
 
-const LandingPage = () => {
+const LandingPage = ( {  movies, setMovies } ) => {
+
+  const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
+
   return (
     <div className='landing-page-container'>
       <div className="face-and-bubble-container">
@@ -12,7 +15,7 @@ const LandingPage = () => {
 			</div>
       <div className='container-for-button'>
       <Link to={`/movies`}>
-        <button className='go-to-movies-button'>Show Me The Wilson</button>
+        <button className='go-to-movies-button' onClick={setMovies([])}>Show Me The Wilson</button>
       </Link>
       </div>
     </div>

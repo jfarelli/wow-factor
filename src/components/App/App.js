@@ -14,9 +14,9 @@ const App = ( ) => {
   const [ videos, setVideos ] = useState( [ ] );
   const [ singleMovie, setSingleMovie ] = useState( [ ] );
   const [ wows, setWows ] = useState( [ ] );
-
-  const [search, setSearch] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  // const [ dropdown, setDropdown ] = useState( true );
+  // const [search, setSearch] = useState('');
+  // const [searchResults, setSearchResults] = useState([]);
   
 
  useEffect( ( ) => {
@@ -30,13 +30,13 @@ const App = ( ) => {
       setVideos( movieClips );
     } )
 
-    const filteredResults = movies.filter((movie) =>
-          ((movie.movie).toUpperCase()).includes(search.toUpperCase()))
-          // || ((movie.title).toLowerCase()).includes(search.toLowerCase()));
+    // const filteredResults = movies.filter((movie) =>
+    //       ((movie.movie).toUpperCase()).includes(search.toUpperCase()))
+    //       // || ((movie.title).toLowerCase()).includes(search.toLowerCase()));
 
-        setSearchResults(filteredResults.reverse());
+    //     setSearchResults(filteredResults.reverse());
     
-        console.log('SEARCH RESULTS: ', filteredResults)
+    //     console.log('SEARCH RESULTS: ', filteredResults)
   }, [  ])
 
   const displaySingleMovie = ( timestamp ) => {
@@ -57,26 +57,51 @@ const App = ( ) => {
 
   }
 
+  // const selectMovieFromDropdown = ( ) => {
+  //   setDropdown( false )
+  // }
 
+  // const selectWowFromDropdown = ( ) => {
+  //   setDropdown( false )
+  // }
 
   
   return (
     <div className="App">
       <Switch>
-        <Route exact path='/' render={ ( ) =>  <LandingPage /> }/>
+        <Route exact path='/' render={ ( ) =>  <LandingPage movies={movies} setMovies={setMovies}/> }/>
       </Switch>
       
-        <Nav 
+      <Switch>
+        
+
+        <Route exact path='/movies' render={ ( ) => 
+        <div>
+          <Nav 
           movies={ movies } 
           displaySingleMovie={ displaySingleMovie }  
           displayWowCount={ displayWowCount } 
           randomize={ randomize }
-          search={search} 
-          setSearch={setSearch}/>
+          // search={search} 
+          // setSearch={setSearch}
+          wows={ wows }
+          setMovies={ setMovies }/>
+          <MovieContainer movies={ movies } wows={ wows } displaySingleMovie={ displaySingleMovie } />
+        </div> } />
 
-      <Switch>
-        <Route exact path='/movies' render={ ( ) => <MovieContainer movies={ movies } wows={ wows } displaySingleMovie={ displaySingleMovie } searchResults={ searchResults } /> } />
-        <Route exact path='/details' render={ ( ) => <MovieDetails movie={ singleMovie } videos={ videos }/> } />
+        <Route exact path='/details' render={ ( ) => 
+        <div>
+          <Nav 
+          movies={ movies } 
+          displaySingleMovie={ displaySingleMovie }  
+          displayWowCount={ displayWowCount } 
+          randomize={ randomize }
+          // search={search} 
+          // setSearch={setSearch}
+          wows={ wows }
+          setMovies={ setMovies }/>
+          <MovieDetails movie={ singleMovie } videos={ videos }/>
+        </div> } />
       </Switch>
         <Footer />
 

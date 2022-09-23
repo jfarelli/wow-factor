@@ -1,8 +1,10 @@
 import './MovieContainer.css'
 import React from 'react'
+import { useEffect } from 'react';
 import SingleMovie from '../SingleMovie/SingleMovie'
 
 const MovieContainer = ( { movies, wows, videos, displaySingleMovie, searchResults } ) => {
+
     const sortedMovies = movies.sort( ( a, b ) => b.year - a.year );
 
     const movieCards = 

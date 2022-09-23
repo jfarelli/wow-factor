@@ -3,7 +3,7 @@ import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/ass
 import React from "react";
 import Form from "../Form/Form";
 
-const Nav = ( { movies, displaySingleMovie, randomize,  displayWowCount, search, setSearch } ) => {
+const Nav = ( { movies, displaySingleMovie, randomize,  displayWowCount, search, setSearch, dropdown, selectMovieFromDropdown, wows, setMovies } ) => {
 
 
   return (
@@ -18,7 +18,11 @@ const Nav = ( { movies, displaySingleMovie, randomize,  displayWowCount, search,
         randomize={ randomize } 
         displayWowCount={ displayWowCount }
         search={search} 
-        setSearch={setSearch}/>
+        dropdown={ dropdown }
+        selectMovieFromDropdown={ selectMovieFromDropdown }
+        setSearch={setSearch}
+        wows={ wows }
+        setMovies={ setMovies }/>
     </div>
   );
 };
