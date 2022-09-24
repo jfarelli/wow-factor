@@ -17,10 +17,10 @@ const MovieDetails = ({ movie }) => {
           height="360"
         />
         <div className="movie-details">
-          <p>Character: {movie.character}</p>
-          <p>Line: "{movie.full_line}"</p>
-          <p>'Wow' Count at Clip: {movie.current_wow_in_movie}</p>
-          <p>Total 'Wow' Count in Movie: {movie.total_wows_in_movie}</p>
+          <p>Character: <b>{movie.character}</b></p>
+          <p>Line: <b>"{movie.full_line}"</b></p>
+          <p><b>{movie.current_wow_in_movie}</b> "WOW"'s at Clip</p>
+          <p><b>{movie.total_wows_in_movie}</b> "WOW"'s Total in the Movie</p>
         </div>
       </div>
     </div>

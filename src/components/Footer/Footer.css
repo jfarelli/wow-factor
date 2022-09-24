@@ -2,11 +2,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 30px;
+  height: 25px;
   width: 100vw;
   position: fixed;
   bottom: 0;
-  background-color: #C2B280;
+  background-color: rgba(98, 117, 127, 0.5);
+  color: #fafafa;
 }
 
 .linkedinAnchor,
@@ -17,14 +18,20 @@
   margin: 0px 5px 0px 5px;
 }
 
+.linkedinAnchor:hover,
+.githubAnchor:hover {
+  filter: invert(0%) sepia(87%) saturate(7500%) hue-rotate(43deg) brightness(94%) contrast(96%);
+}
+
 .personContainer {
   display: flex;
   align-items: center;
-  font-size: 22px;
+  font-size: 17px;
   margin-right: 2%;
 }
 
-.name:hover {
-  /* text-shadow: 0 1px rgba(255, 105, 180, 0.95); */
+.name {
+  text-shadow: 0 1px #af4448;
   cursor: default;
 }
+

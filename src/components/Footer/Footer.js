@@ -1,6 +1,6 @@
 import "./Footer.css";
 import React from "react";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,10 +11,10 @@ const Footer = () => {
           className="linkedinAnchor"
           href="https://www.linkedin.com/in/jordan-farelli/"
         >
-          <AiFillLinkedin />
+          <FaLinkedin />
         </a>
         <a className="githubAnchor" href="https://github.com/jfarelli">
-          <AiFillGithub />
+          <FaGithubSquare />
         </a>
       </div>
     </div>
