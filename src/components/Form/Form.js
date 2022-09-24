@@ -20,9 +20,9 @@ const Form = ({
       return 1
     }
   });
-  console.log('SORTED: ', sortedMovies)
+  // console.log('SORTED: ', sortedMovies)
   const dropdownTitles = sortedMovies.map((movie) => {
-    console.log('MOVIE.MOVIE: ', movie.movie)
+    // console.log('MOVIE.MOVIE: ', movie.movie)
     return (
       <option
         key={movie.timestamp}

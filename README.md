@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# WOW-FACTOR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The app that answers the question: "How many times did Owen Wilson say "Wooow!" in a movie???
 
-## Available Scripts
+### Table of contents
+* [How To Use](#how)
+* [Challenges](#challenges)
+* [Future Iterations](#future)
+* [Technologies Used](#tech)
+* [Contributors](#contributors)
 
-In the project directory, you can run:
+### How To Use: <a name="how"></a>
 
-### `npm start`
+* Please visit my app: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Descripe clip
+Clip
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Challenges & Reflections: <a name="challenges"></a>
+* Spearheading a solo project is always a little intimidating at first, but looking back to where I started, the ups and downs throughout, and now seeign the completion of this project brings great joy and supreme sense of accomplishment. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Future Iterations: <a name="future"></a>
+* What would you like to do to the project in the future?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+### Technologies used:<br><a name="tech"></a>
+- <img alt="React" src="https://user-images.githubusercontent.com/25181517/117448085-96eed600-af3e-11eb-9492-83a3a0fcbfb1.png" width="22px"/> React
+- <img alt="Cypress" src="https://user-images.githubusercontent.com/102757890/188327611-9db68508-44e6-429d-9eed-0d8a243302a1.png" width="20px"/> Cypress
+- <img alt="React Router" src="https://user-images.githubusercontent.com/102757890/188328033-172b27de-1636-4629-b997-2eadb33634ad.png" width="20px"/> React Router
+- <img alt="javascript" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="20px"/> JavaScript
+- <img alt="HTML" src="https://user-images.githubusercontent.com/25181517/117447535-f00a3a00-af3d-11eb-89bf-45aaf56dbaf1.png" width="20px"/> HTML 
+- <img alt="CSS" src="https://user-images.githubusercontent.com/25181517/117447663-0fa16280-af3e-11eb-8677-bcf8e4f8e298.png" width="20px"/> CSS
+- <img alt="NPM" src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" width="20px"/> NPM
+- <img alt="Github" src="https://user-images.githubusercontent.com/25181517/117364276-fc4eb280-aebd-11eb-92ba-8a6ef74b7313.png" width="20px"/> Github
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Contributors: <a name="contributors"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Jordan Farelli: [LinkedIn](https://www.linkedin.com/in/jordan-farelli/) | [GitHub](https://github.com/jfarelli)
