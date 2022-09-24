@@ -12,11 +12,8 @@ import { Switch, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [videos, setVideos] = useState([]);
-  const [singleMovie, setSingleMovie] = useState('');
+  const [singleMovie, setSingleMovie] = useState("");
   const [wows, setWows] = useState([]);
-  // const [ dropdown, setDropdown ] = useState( true );
-  // const [search, setSearch] = useState('');
-  // const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     fetchWows("random?results=100").then((wow) => {
@@ -28,19 +25,11 @@ const App = () => {
       const movieClips = unique.map((movie) => movie.video);
       setVideos(movieClips);
     });
-
-    // const filteredResults = movies.filter((movie) =>
-    //       ((movie.movie).toUpperCase()).includes(search.toUpperCase()))
-    //       // || ((movie.title).toLowerCase()).includes(search.toLowerCase()));
-
-    //     setSearchResults(filteredResults.reverse());
-
   }, []);
 
-  const displaySingleMovie = (timestamp) => {
-    const moviePick = movies.find((movie) => movie.timestamp === timestamp);
+  const displaySingleMovie = (movieTitle) => {
+    const moviePick = movies.find((movie) => movie.movie === movieTitle);
     setSingleMovie(moviePick);
-
   };
 
   const randomize = () => {
@@ -55,34 +44,26 @@ const App = () => {
     setWows(wowPicks);
   };
 
-  // const selectMovieFromDropdown = ( ) => {
-  //   setDropdown( false )
-  // }
-
-  // const selectWowFromDropdown = ( ) => {
-  //   setDropdown( false )
-  // }
-
   return (
     <div className="App">
       <Switch>
         <Route
           exact
           path="/"
-          render={() => <LandingPage singleMovie={singleMovie} setWows={setWows} />}
+          render={() => (
+            <LandingPage singleMovie={singleMovie} setWows={setWows} />
+          )}
         />
         <Route
           exact
           path="/movies"
           render={() => (
-            <div>
+            <div className="nav-and-moviecontainer">
               <Nav
                 movies={movies}
                 displaySingleMovie={displaySingleMovie}
                 displayWowCount={displayWowCount}
                 randomize={randomize}
-                // search={search}
-                // setSearch={setSearch}
                 wows={wows}
                 setMovies={setMovies}
                 setSingleMovie={setSingleMovie}
@@ -106,8 +87,6 @@ const App = () => {
                 displaySingleMovie={displaySingleMovie}
                 displayWowCount={displayWowCount}
                 randomize={randomize}
-                // search={search}
-                // setSearch={setSearch}
                 wows={wows}
                 setMovies={setMovies}
                 singleMovie={singleMovie}
@@ -131,8 +110,3 @@ const App = () => {
 };
 
 export default App;
-
-// const handleInput = (event) => {
-//   const results = movies.filter((movie) => movie.movie.toLowerCase().includes(event.target.value.toLowerCase()))
-//   setMovies( results )
-// };
