@@ -1,6 +1,6 @@
 # WOW-FACTOR
 
-## The app that answers the question: "How many times did Owen Wilson say "Wooow!" in a movie???
+## The app that answers the question: "How many times did Owen Wilson say "Wooow!" in that movie???
 
 ### Table of contents
 * [How To Use](#how)
