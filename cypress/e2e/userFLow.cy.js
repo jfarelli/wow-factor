@@ -161,7 +161,7 @@ describe("User Flow", () => {
       .should("contain", "Total 'Wow' Count in Movie: 2");
   });
 
-  it("Should be able to select another movie from the dropdown and be shown that movies details", () => {
+  it("Should be able to select another movie from the dropdown and be shown that movie's details", () => {
     cy.get(".single-movie-container")
       .eq(2)
       .click()
@@ -169,5 +169,16 @@ describe("User Flow", () => {
       .should("eq", "http://localhost:3000/details")
       .get('.movie-title-dropdown')
       // .select("The Internship")
+  });
+
+  it("should redirect the user to an error page when the page fails to load", () => {
+    cy.visit("http://localhost:3000/blah")
+      .get(".error-page-container").should('exist')
+      .get('.error-face-and-bubble-container')
+      .contains("Wooow! Something went wrong!")
+      .get(".error-go-to-movies-button")
+      .click()
+      .url()
+      .should("eq", "http://localhost:3000/movies");
   });
 });
