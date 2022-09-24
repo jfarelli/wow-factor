@@ -9,18 +9,24 @@ const MovieContainer = ({
   wows,
   // videos,
   displaySingleMovie,
-  // searchResults,
 }) => {
-  // console.log("MOVIES: ", movies);
-  // console.log("WOWS: ", wows);
-  const sortedMovies = movies.sort((a, b) => b.year - a.year);
-
+  // const sortedMovies = movies.sort((a, b) => b.year - a.year);
+  const sortedMovies = movies.sort((a, b) => {
+    let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
+    if ( first < second){
+      return -1
+    }
+    if (first > second ) {
+      return 1
+    }
+  });
+// console.log('SORTED YEAR: ', sorted)
   const movieCards = !wows.length
     ? sortedMovies.map((movie) => {
         return (
           <SingleMovie
-            id={movie.timestamp}
-            key={movie.timestamp}
+            id={movie.movie}
+            key={movie.movie}
             title={movie.movie}
             poster={movie.poster}
             // videos={ videos }
@@ -29,24 +35,11 @@ const MovieContainer = ({
         );
         // Swiper functionality for dynamic movie display
       })
-    : // : !wows.length ? (
-      //   searchResults.map( movie => {
-      //       return (
-      //           <SingleMovie
-      //               id={ movie.timestamp }
-      //               key={ movie.timestamp }
-      //               title={ movie.movie }
-      //               poster={ movie.poster }
-      //               videos={ videos }
-      //               displaySingleMovie={ displaySingleMovie }
-      //               />
-      //       )
-      //   } ) )
-      wows.map((movie) => {
+    : wows.map((movie) => {
         return (
           <SingleMovie
-            id={movie.timestamp}
-            key={movie.timestamp}
+            id={movie.movie}
+            key={movie.movie}
             title={movie.movie}
             poster={movie.poster}
             // videos={ videos }
@@ -80,7 +73,7 @@ MovieContainer.propTypes = {
   ),
   wows: PropTypes.arrayOf(
     PropTypes.shape({
-      audio: PropTypes.string.isRequired, 
+      audio: PropTypes.string.isRequired,
       character: PropTypes.string.isRequired,
       current_wow_in_movie: PropTypes.number.isRequired,
       director: PropTypes.string.isRequired,
@@ -95,5 +88,5 @@ MovieContainer.propTypes = {
       year: PropTypes.number.isRequired,
     })
   ),
-  displaySingleMovie: PropTypes.func.isRequired
+  displaySingleMovie: PropTypes.func.isRequired,
 };

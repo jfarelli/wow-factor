@@ -1,5 +1,5 @@
 import "./Form.css";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -8,38 +8,39 @@ const Form = ({
   displaySingleMovie,
   randomize,
   displayWowCount,
-  // setMovies,
-  wows,
-  // search,
-  // setSearch,
-  singleMovie
+  singleMovie,
 }) => {
-  console.log('MOVIES: ', movies)
-  console.log('WOWS: ', wows)
-  const sortedMovies = movies.sort((a, b) => b.year - a.year);
+  // const sortedMovies = movies.sort((a, b) => a.moive - b.movie);
+  const sortedMovies = movies.sort((a, b) => {
+    let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
+    if ( first < second){
+      return -1
+    }
+    if (first > second ) {
+      return 1
+    }
+  });
+  console.log('SORTED: ', sortedMovies)
   const dropdownTitles = sortedMovies.map((movie) => {
+    console.log('MOVIE.MOVIE: ', movie.movie)
     return (
       <option
         key={movie.timestamp}
         id={movie.timestamp}
-        value={`${movie.timestamp}`}
+        value={movie.movie}
         onClick={(e) => handleMovieChange(e.target.value)}
       >
         {movie.movie}
       </option>
     );
   });
-
   const handleMovieChange = (e) => {
-    // e.preventDefault();
     displaySingleMovie(e.target.value);
   };
 
   const handleWowChange = (e) => {
-    // e.preventDefault();
     displayWowCount(e.target.value);
   };
-  console.log('SINGLEMOVIE: ', singleMovie)
 
   return (
     <form>
@@ -54,13 +55,6 @@ const Form = ({
         </Link>
       </div>
       <div className="dropdown-container">
-        {/* <Link to='/movies'>
-        <input
-          id="search"
-          type="text"
-          placeholder="Search Movies"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}/> */}
         {singleMovie ? (
           <Link to="/details">
             <select
@@ -71,7 +65,7 @@ const Form = ({
               {dropdownTitles}
             </select>
           </Link>
-        ) :  (
+        ) : !singleMovie ? ( // WHY IS THIS NOT WORKING NOW?!!????
           <Link to="/movies">
             <select
               onChange={handleWowChange}
@@ -88,7 +82,9 @@ const Form = ({
               <option value="10">10</option>
             </select>
           </Link>
-        ) }
+        ) : (
+          singleMovie
+        )}
       </div>
     </form>
   );
@@ -117,32 +113,4 @@ Form.propTypes = {
   displaySingleMovie: PropTypes.func.isRequired,
   randomize: PropTypes.func.isRequired,
   displayWowCount: PropTypes.func.isRequired,
-  // search: PropTypes.func.isRequired,
-  // setSearch: PropTypes.func.isRequired,
-  wows: PropTypes.arrayOf(
-    PropTypes.shape({
-      audio: PropTypes.string.isRequired,
-      character: PropTypes.string.isRequired,
-      current_wow_in_movie: PropTypes.number.isRequired,
-      director: PropTypes.string.isRequired,
-      full_line: PropTypes.string.isRequired,
-      movie: PropTypes.string.isRequired,
-      movie_duration: PropTypes.string.isRequired,
-      poster: PropTypes.string.isRequired,
-      release_date: PropTypes.string.isRequired,
-      timestamp: PropTypes.string.isRequired,
-      total_wows_in_movie: PropTypes.number.isRequired,
-      video: PropTypes.object.isRequired,
-      year: PropTypes.number.isRequired,
-    })
-  ),
-  // setMovies: PropTypes.func.isRequired,
 };
-
-{
-  /* <input
-type='text'
-name='movie-search'
-handleInput={ handleInput }
-onChange={( e ) => handleChange( e ) }></input> */
-}

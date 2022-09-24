@@ -9,12 +9,8 @@ const Nav = ({
   displaySingleMovie,
   randomize,
   displayWowCount,
-  // search,
-  // setSearch,
-  // dropdown,
   wows,
-  // setMovies,
-  singleMovie
+  singleMovie,
 }) => {
   return (
     <div className="nav-container">
@@ -27,11 +23,7 @@ const Nav = ({
         displaySingleMovie={displaySingleMovie}
         randomize={randomize}
         displayWowCount={displayWowCount}
-        // search={search}
-        // setSearch={setSearch}
-        // dropdown={dropdown}
         wows={wows}
-        // setMovies={setMovies}
         singleMovie={singleMovie}
       />
     </div>
@@ -43,7 +35,7 @@ export default Nav;
 Nav.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
-      audio: PropTypes.string.isRequired, 
+      audio: PropTypes.string.isRequired,
       character: PropTypes.string.isRequired,
       current_wow_in_movie: PropTypes.number.isRequired,
       director: PropTypes.string.isRequired,
@@ -61,12 +53,9 @@ Nav.propTypes = {
   displaySingleMovie: PropTypes.func.isRequired,
   randomize: PropTypes.func.isRequired,
   displayWowCount: PropTypes.func.isRequired,
-  // search: PropTypes.func.isRequired,
-  // setSearch: PropTypes.func.isRequired,
-  // dropdown: PropTypes.func.isRequired,
   wows: PropTypes.arrayOf(
     PropTypes.shape({
-      audio: PropTypes.string.isRequired, 
+      audio: PropTypes.string.isRequired,
       character: PropTypes.string.isRequired,
       current_wow_in_movie: PropTypes.number.isRequired,
       director: PropTypes.string.isRequired,
@@ -81,9 +70,7 @@ Nav.propTypes = {
       year: PropTypes.number.isRequired,
     })
   ),
-  // setMovies: PropTypes.func.isRequired,
 };
-
 
 {
   /* <span style="--i:1;">✨</span>
