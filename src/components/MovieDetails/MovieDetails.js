@@ -2,14 +2,14 @@ import "./MovieDetails.css";
 import React from "react";
 import PropTypes from "prop-types";
 
-const MovieDetails = ({ movie }) => {
+const MovieDetails = ({ singleMovie }) => {
   return (
-    <div className="movie-details-container" key={movie.timestamp}>
-      <img src={movie.poster} className="poster-img" />
+    <div className="movie-details-container" key={singleMovie.timestamp}>
+      <img src={singleMovie.poster} className="poster-img" />
       <div className="trailer-and-details-container">
         <div className="iframe-wrapper">
           <iframe
-            src={movie.video["1080p"]}
+            src={singleMovie.video["1080p"]}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
@@ -20,16 +20,16 @@ const MovieDetails = ({ movie }) => {
         </div>
         <div className="movie-details">
           <p>
-            Character: <b>{movie.character}</b>
+            Character: <b>{singleMovie.character}</b>
           </p>
           <p>
-            Line: <b>"{movie.full_line}"</b>
+            Line: <b>"{singleMovie.full_line}"</b>
           </p>
           <p>
-            <b>{movie.current_wow_in_movie}</b> "WOW"'s at Clip
+            <b>{singleMovie.current_wow_in_movie}</b> "WOW"'s at Clip
           </p>
           <p>
-            <b>{movie.total_wows_in_movie}</b> Total "WOW"'s in the Movie
+            <b>{singleMovie.total_wows_in_movie}</b> Total "WOW"'s in the Movie
           </p>
         </div>
       </div>
@@ -40,7 +40,7 @@ const MovieDetails = ({ movie }) => {
 export default MovieDetails;
 
 MovieDetails.propTypes = {
-  movie: PropTypes.shape({
+  singleMovie: PropTypes.shape({
     audio: PropTypes.string.isRequired,
     character: PropTypes.string.isRequired,
     current_wow_in_movie: PropTypes.number.isRequired,

@@ -52,7 +52,7 @@ const Form = ({
               {dropdownTitles}
             </select>
           </Link>
-        ) : !singleMovie ? ( // WHY IS THIS NOT WORKING NOW?!!????
+        ) : !singleMovie ? (
           <Link to="/movies">
             <select
               onChange={handleWowChange}

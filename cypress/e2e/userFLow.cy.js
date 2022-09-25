@@ -1,6 +1,6 @@
-Cypress.on('uncaught:exception', (err, runnable) => {
-  return false
-})
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
+});
 
 describe("User Flow", () => {
   beforeEach(() => {
@@ -177,28 +177,28 @@ describe("User Flow", () => {
       .should("have.length", 6)
       .get("option")
       .eq(1)
-      .should("contain", 'Cars 3')
+      .should("contain", "Cars 3")
       .get("option")
       .eq(2)
-      .should("contain", 'No Escape')
+      .should("contain", "No Escape")
       .get("option")
       .eq(3)
-      .should("contain", 'The Big Bounce')
+      .should("contain", "The Big Bounce")
       .get("option")
       .eq(4)
-      .should("contain", 'The Haunting')
+      .should("contain", "The Haunting")
       .get("option")
       .eq(5)
-      .should("contain", 'The Internship')
-      .get('select')
+      .should("contain", "The Internship")
+      .get("select")
       .select("The Internship")
-      .should('have.value', 'The Internship')
-      .get('select')
+      .should("have.value", "The Internship")
+      .get("select")
       .select("The Haunting")
-      .should('have.value', 'The Haunting')
+      .should("have.value", "The Haunting");
   });
 
-  it("should redirect the user to an error page when the page fails to load", () => {
+  it("Should redirect the user to an error page when the page fails to load", () => {
     cy.visit("http://localhost:3000/blah")
       .get(".error-page-container")
       .should("exist")

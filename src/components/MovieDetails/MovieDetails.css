@@ -54,7 +54,18 @@ p {
   }
 
   .movie-details-container {
-    margin-top: 18%;
+    flex-direction: column;
+    margin-top: 28%;
+  }
+
+  .poster-img {
+    width: 35%;
+    margin-bottom: 7%;
+  }
+  
+  .movie-details {
+    width: 70%;
+    margin-top: 6%;
   }
 }
 
@@ -66,12 +77,11 @@ p {
 
   .poster-img {
     width: 35%;
-    margin-bottom: 7%;;
+    margin-bottom: 7%;
   }
 
   .movie-details {
     width: 70%;
     margin-top: 6%;
   }
-  
 }

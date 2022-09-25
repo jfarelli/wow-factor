@@ -15,7 +15,7 @@ const ErrorPage = () => {
       <div className="error-container-for-button">
         <Link to={`/movies`}>
           <button className="error-go-to-movies-button">
-            Show Me The Wilson
+            Back to Wilson
           </button>
         </Link>
       </div>

@@ -1,15 +1,9 @@
 import "./MovieContainer.css";
 import React from "react";
-import { useEffect } from "react";
 import SingleMovie from "../SingleMovie/SingleMovie";
 import PropTypes from "prop-types";
 
-const MovieContainer = ({
-  wows,
-  sortedMovies,
-  displaySingleMovie,
-  // videos,
-}) => {
+const MovieContainer = ({ wows, sortedMovies, displaySingleMovie }) => {
   const movieCards = !wows.length
     ? sortedMovies.map((movie) => {
         return (
@@ -18,11 +12,9 @@ const MovieContainer = ({
             key={movie.movie}
             title={movie.movie}
             poster={movie.poster}
-            // videos={ videos }
             displaySingleMovie={displaySingleMovie}
           />
         );
-        // Swiper functionality for dynamic movie display
       })
     : wows.map((movie) => {
         return (
@@ -31,7 +23,6 @@ const MovieContainer = ({
             key={movie.movie}
             title={movie.movie}
             poster={movie.poster}
-            // videos={ videos }
             displaySingleMovie={displaySingleMovie}
           />
         );
@@ -77,5 +68,5 @@ MovieContainer.propTypes = {
       year: PropTypes.number.isRequired,
     })
   ),
-  displaySingleMovie: PropTypes.func.isRequired
+  displaySingleMovie: PropTypes.func.isRequired,
 };

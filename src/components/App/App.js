@@ -11,7 +11,6 @@ import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [videos, setVideos] = useState([]);
   const [singleMovie, setSingleMovie] = useState([]);
   const [wows, setWows] = useState([]);
 
@@ -22,18 +21,17 @@ const App = () => {
       const iterator = newMap.values();
       const unique = [...iterator];
       setMovies(unique);
-      const movieClips = unique.map((movie) => movie.video);
-      setVideos(movieClips);
     });
   }, []);
 
   const sortedMovies = movies.sort((a, b) => {
-    let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
-    if ( first < second){
-      return -1
+    let first = a.movie.toLowerCase(),
+      second = b.movie.toLowerCase();
+    if (first < second) {
+      return -1;
     }
-    if (first > second ) {
-      return 1
+    if (first > second) {
+      return 1;
     }
   });
 
@@ -70,17 +68,14 @@ const App = () => {
           render={() => (
             <div className="nav-and-moviecontainer">
               <Nav
-                movies={movies}
                 displaySingleMovie={displaySingleMovie}
                 displayWowCount={displayWowCount}
                 randomize={randomize}
-                wows={wows}
-                setMovies={setMovies}
                 setSingleMovie={setSingleMovie}
                 sortedMovies={sortedMovies}
+                wows={wows}
               />
               <MovieContainer
-                movies={movies}
                 wows={wows}
                 displaySingleMovie={displaySingleMovie}
                 sortedMovies={sortedMovies}
@@ -95,16 +90,14 @@ const App = () => {
           render={() => (
             <div>
               <Nav
-                movies={movies}
                 displaySingleMovie={displaySingleMovie}
                 displayWowCount={displayWowCount}
                 randomize={randomize}
-                wows={wows}
-                setMovies={setMovies}
                 singleMovie={singleMovie}
                 sortedMovies={sortedMovies}
+                wows={wows}
               />
-              <MovieDetails movie={singleMovie} videos={videos} />
+              <MovieDetails singleMovie={singleMovie} />
             </div>
           )}
         />

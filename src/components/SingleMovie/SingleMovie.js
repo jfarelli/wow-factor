@@ -3,13 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const SingleMovie = ({
-  id,
-  title,
-  // videos,
-  poster,
-  displaySingleMovie,
-}) => {
+const SingleMovie = ({ id, title, poster, displaySingleMovie }) => {
   return (
     <div className="single-movie-container">
       <Link to={`/details`}>
@@ -31,7 +25,6 @@ export default SingleMovie;
 SingleMovie.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  // videos: PropTypes.array.isRequired,
   poster: PropTypes.string.isRequired,
   displaySingleMovie: PropTypes.func.isRequired,
 };
