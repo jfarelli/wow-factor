@@ -57,3 +57,21 @@ p {
     margin-top: 18%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .movie-details-container {
+    flex-direction: column;
+    margin-top: 25%;
+  }
+
+  .poster-img {
+    width: 35%;
+    margin-bottom: 7%;;
+  }
+
+  .movie-details {
+    width: 70%;
+    margin-top: 6%;
+  }
+  
+}

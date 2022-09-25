@@ -117,3 +117,19 @@
     font-size: 0.85em;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .error-wilson {
+    width: 50%;
+  }
+
+  .error-bubble {
+    font-size: 1.25em;
+    margin-top: 20%;
+  }
+
+  .error-container-for-button {
+    top: 51%;
+    right: 8%;
+  }
+}
