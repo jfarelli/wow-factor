@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const MovieDetails = ({ singleMovie }) => {
   return (
     <div className="movie-details-container" key={singleMovie.timestamp}>
-      <img src={singleMovie.poster} className="poster-img" />
+      <img src={singleMovie.poster} className="poster-img" alt={`Movie poster for ${singleMovie.movie}`}/>
       <div className="trailer-and-details-container">
         <div className="iframe-wrapper">
           <iframe

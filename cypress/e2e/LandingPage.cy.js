@@ -22,9 +22,9 @@ describe("Landing Page", () => {
       .get('.personContainer')
       .get('p')
       .contains('Jordan Farelli')
-      .get('.linkedinAnchor')
+      .get('.linkedin-anchor')
       .should('have.attr', 'href', 'https://www.linkedin.com/in/jordan-farelli/')
-      .get('.githubAnchor')
+      .get('.github-anchor')
       .should('have.attr', 'href', 'https://github.com/jfarelli')
   });
 

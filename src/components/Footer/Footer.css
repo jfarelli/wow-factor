@@ -10,21 +10,21 @@
   color: #fafafa;
 }
 
-.linkedinAnchor,
-.githubAnchor {
+.linkedin-anchor,
+.github-anchor {
   width: 13px;
   filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg)
     brightness(108%) contrast(101%);
   margin: 0px 5px 0px 5px;
 }
 
-.linkedinAnchor:hover,
-.githubAnchor:hover {
+.linkedin-anchor:hover,
+.github-anchor:hover {
   filter: invert(0%) sepia(87%) saturate(7500%) hue-rotate(43deg)
     brightness(94%) contrast(96%);
 }
 
-.linkedinAnchor {
+.linkedin-anchor {
   margin-right: 0;
 }
 

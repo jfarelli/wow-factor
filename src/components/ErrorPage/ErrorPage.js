@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     <div className="error-page-container">
       <div className="error-face-and-bubble-container">
-        <img src={wilson} className="error-wilson" />
+        <img src={wilson} className="error-wilson" alt='face'/>
         <div className="error-bubble">
           Wooow! <br></br>Something went wrong!
         </div>

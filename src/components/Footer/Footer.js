@@ -8,12 +8,17 @@ const Footer = () => {
       <div className="personContainer">
         <p className="name">Jordan Farelli</p>
         <a
-          className="linkedinAnchor"
+          name="linkedin"
+          className="linkedin-anchor"
           href="https://www.linkedin.com/in/jordan-farelli/"
         >
           <FaLinkedin />
         </a>
-        <a className="githubAnchor" href="https://github.com/jfarelli">
+        <a
+          name="linkedin"
+          className="github-anchor"
+          href="https://github.com/jfarelli"
+        >
           <FaGithubSquare />
         </a>
       </div>

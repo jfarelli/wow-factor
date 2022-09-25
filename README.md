@@ -6,6 +6,7 @@
 
 ### Table of contents
 * [How To Use](#how)
+* [Features](#features)
 * [Challenges](#challenges)
 * [Future Iterations](#future)
 * [Technologies Used](#tech)
@@ -20,7 +21,7 @@
 
 <br>
 
-**USER FLOW**
+*USER FLOW*
 * Landing Page to Movies Page
 
 https://user-images.githubusercontent.com/97558758/192111839-d028eb42-caba-4d4b-896a-5a7287d67dfb.mov
@@ -44,7 +45,7 @@ https://user-images.githubusercontent.com/97558758/192123269-8430177f-dee4-418c-
 
 <br>
 
-**ERROR HANDLING**
+*ERROR HANDLING*
 * Bad URL
 
 https://user-images.githubusercontent.com/97558758/192123286-6ed3fa99-84f0-41de-8a1d-99eebf62ccef.mov
@@ -52,7 +53,20 @@ https://user-images.githubusercontent.com/97558758/192123286-6ed3fa99-84f0-41de-
 
 <br>
 
+### Features: <a name="features"></a>
+**User:**
+* See a selection of movies where Owen Wilson says "WOW"
+* Filter movies by the total number of times Owen Wilson says "WOW"
+* See a "Random" Owen Wilson movie
 
+**Developer:**
+* End to End testing with mulitple UX in mind
+* Provide different React Router routes
+* Proper error handling for all "Sad Paths" of a UX
+* Secure a 95% lighthouse accessibility score
+* A consistent, modular file structure
+
+<br>
 
 ### Challenges & Reflections: <a name="challenges"></a>
 * Spearheading a solo project is always a little intimidating at first, but looking back to where I started, the ups and downs throughout, and now seeign the completion of this project brings great joy and supreme sense of accomplishment. 
