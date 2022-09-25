@@ -1,16 +1,17 @@
 import "./Nav.css";
-import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson.jpeg";
+import wilson from "../../assets/wilson.jpeg";
 import React from "react";
 import Form from "../Form/Form";
 import PropTypes from "prop-types";
 
 const Nav = ({
-  movies,
   displaySingleMovie,
-  randomize,
   displayWowCount,
-  wows,
+  movies,
+  randomize,
   singleMovie,
+  sortedMovies,
+  wows,
 }) => {
   return (
     <div className="nav-container">
@@ -25,6 +26,7 @@ const Nav = ({
         displayWowCount={displayWowCount}
         wows={wows}
         singleMovie={singleMovie}
+        sortedMovies={sortedMovies}
       />
     </div>
   );
@@ -33,6 +35,8 @@ const Nav = ({
 export default Nav;
 
 Nav.propTypes = {
+  displaySingleMovie: PropTypes.func.isRequired,
+  displayWowCount: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       audio: PropTypes.string.isRequired,
@@ -50,9 +54,39 @@ Nav.propTypes = {
       year: PropTypes.number.isRequired,
     })
   ),
-  displaySingleMovie: PropTypes.func.isRequired,
   randomize: PropTypes.func.isRequired,
-  displayWowCount: PropTypes.func.isRequired,
+  singleMovie: PropTypes.shape({
+    audio: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+    current_wow_in_movie: PropTypes.number.isRequired,
+    director: PropTypes.string.isRequired,
+    full_line: PropTypes.string.isRequired,
+    movie: PropTypes.string.isRequired,
+    movie_duration: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    total_wows_in_movie: PropTypes.number.isRequired,
+    video: PropTypes.object.isRequired,
+    year: PropTypes.number.isRequired,
+  }),
+  sortedMovies: PropTypes.arrayOf(
+    PropTypes.shape({
+      audio: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+      current_wow_in_movie: PropTypes.number.isRequired,
+      director: PropTypes.string.isRequired,
+      full_line: PropTypes.string.isRequired,
+      movie: PropTypes.string.isRequired,
+      movie_duration: PropTypes.string.isRequired,
+      poster: PropTypes.string.isRequired,
+      release_date: PropTypes.string.isRequired,
+      timestamp: PropTypes.string.isRequired,
+      total_wows_in_movie: PropTypes.number.isRequired,
+      video: PropTypes.object.isRequired,
+      year: PropTypes.number.isRequired,
+    })
+  ),
   wows: PropTypes.arrayOf(
     PropTypes.shape({
       audio: PropTypes.string.isRequired,

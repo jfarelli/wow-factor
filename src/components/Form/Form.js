@@ -4,21 +4,12 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Form = ({
-  movies,
   displaySingleMovie,
-  randomize,
   displayWowCount,
+  randomize,
   singleMovie,
+  sortedMovies,
 }) => {
-  const sortedMovies = movies.sort((a, b) => {
-    let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
-    if ( first < second){
-      return -1
-    }
-    if (first > second ) {
-      return 1
-    }
-  });
   const dropdownTitles = sortedMovies.map((movie) => {
     return (
       <option
@@ -89,7 +80,25 @@ const Form = ({
 export default Form;
 
 Form.propTypes = {
-  movies: PropTypes.arrayOf(
+  displaySingleMovie: PropTypes.func.isRequired,
+  displayWowCount: PropTypes.func.isRequired,
+  randomize: PropTypes.func.isRequired,
+  singleMovie: PropTypes.shape({
+    audio: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+    current_wow_in_movie: PropTypes.number.isRequired,
+    director: PropTypes.string.isRequired,
+    full_line: PropTypes.string.isRequired,
+    movie: PropTypes.string.isRequired,
+    movie_duration: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    total_wows_in_movie: PropTypes.number.isRequired,
+    video: PropTypes.object.isRequired,
+    year: PropTypes.number.isRequired,
+  }),
+  sortedMovies: PropTypes.arrayOf(
     PropTypes.shape({
       audio: PropTypes.string.isRequired,
       character: PropTypes.string.isRequired,
@@ -106,7 +115,4 @@ Form.propTypes = {
       year: PropTypes.number.isRequired,
     })
   ),
-  displaySingleMovie: PropTypes.func.isRequired,
-  randomize: PropTypes.func.isRequired,
-  displayWowCount: PropTypes.func.isRequired,
 };

@@ -77,11 +77,13 @@ const App = () => {
                 wows={wows}
                 setMovies={setMovies}
                 setSingleMovie={setSingleMovie}
+                sortedMovies={sortedMovies}
               />
               <MovieContainer
                 movies={movies}
                 wows={wows}
                 displaySingleMovie={displaySingleMovie}
+                sortedMovies={sortedMovies}
               />
             </div>
           )}
@@ -100,6 +102,7 @@ const App = () => {
                 wows={wows}
                 setMovies={setMovies}
                 singleMovie={singleMovie}
+                sortedMovies={sortedMovies}
               />
               <MovieDetails movie={singleMovie} videos={videos} />
             </div>
