@@ -7,15 +7,17 @@ const MovieDetails = ({ movie }) => {
     <div className="movie-details-container" key={movie.timestamp}>
       <img src={movie.poster} className="poster-img" />
       <div className="trailer-and-details-container">
-        <iframe
-          src={movie.video["1080p"]}
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          title="YouTube Video"
-          width="640"
-          height="360"
-        />
+        <div className="iframe-wrapper">
+          <iframe
+            src={movie.video["1080p"]}
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="YouTube Video"
+            width="640"
+            height="360"
+          />
+        </div>
         <div className="movie-details">
           <p>
             Character: <b>{movie.character}</b>

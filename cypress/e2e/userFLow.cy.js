@@ -122,7 +122,7 @@ describe("User Flow", () => {
       .should("contain", '"WOW"\'s at Clip')
       .get("p")
       .eq(3)
-      .should("contain", "\"WOW\"'s in the Movie");
+      .should("contain", '"WOW"\'s in the Movie');
   });
 
   it('Should filter movies by total "Wow" Count', () => {
@@ -158,7 +158,7 @@ describe("User Flow", () => {
       .should("contain", '"WOW"\'s at Clip')
       .get("p")
       .eq(3)
-      .should("contain", "\"WOW\"'s in the Movie");
+      .should("contain", '"WOW"\'s in the Movie');
   });
 
   it("Should be able to select another movie from the dropdown and be shown that movie's details", () => {
@@ -167,8 +167,27 @@ describe("User Flow", () => {
       .click()
       .url()
       .should("eq", "http://localhost:3000/details")
-      .get(".movie-title-dropdown");
-    // .select("The Internship")
+      .get(".movie-title-dropdown")
+      .should("exist")
+      .children()
+      .should("have.length", 6)
+      .get("option")
+      .eq(1)
+      .should("contain", 'Cars 3')
+      .get("option")
+      .eq(2)
+      .should("contain", 'No Escape')
+      .get("option")
+      .eq(3)
+      .should("contain", 'The Big Bounce')
+      .get("option")
+      .eq(4)
+      .should("contain", 'The Haunting')
+      .get("option")
+      .eq(5)
+      .should("contain", 'The Internship')
+      // .get('select')
+      // .select("The Internship") // Does not recognize the value...
   });
 
   it("should redirect the user to an error page when the page fails to load", () => {

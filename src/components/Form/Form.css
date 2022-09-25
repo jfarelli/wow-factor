@@ -15,7 +15,7 @@ form {
 
 .home-button,
 .random-button {
-  height: 2em;
+  height: 100%;
   width: 10em;
   border-radius: 10px;
   border: none;
@@ -40,19 +40,14 @@ form {
 
 .dropdown-container {
   display: flex;
-  /* justify-content: space-between; */
+  /* justify-content: space-between; */  
   margin-right: 9%;
   margin-left: 9%;
 }
 
-.movie-title-dropdown {
-  margin-right: 2%;
-  margin-left: 5%;
-}
-
 .movie-title-dropdown,
 .wow-count-dropdown {
-  height: 1.8em;
+  height: 100%;
   width: 15em;
   border-radius: 5px;
   border: none;
@@ -68,4 +63,21 @@ form {
 .wow-count-dropdown:hover {
   background-color: #c8e3f2;
   box-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .home-button,
+.random-button {
+  width: 7em;
+}
+
+.movie-title-dropdown,
+.wow-count-dropdown {
+  height: 100%;
+  width: 8em;
+}
 }

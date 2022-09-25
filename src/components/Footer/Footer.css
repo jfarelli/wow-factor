@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 25px;
+  height: 4%;
   width: 100vw;
   position: fixed;
   bottom: 0;
@@ -24,6 +24,10 @@
     brightness(94%) contrast(96%);
 }
 
+.linkedinAnchor{
+  margin-right: 0;;
+}
+
 .personContainer {
   display: flex;
   align-items: center;
@@ -32,6 +36,14 @@
 }
 
 .name {
-  text-shadow: 0 1px #af4448;
   cursor: default;
+  margin-right: 0;
+}
+
+.name:hover {
+  text-shadow: 0 2px #af4448;
+}
+
+@media screen and (max-width: 600px) {
+
 }
