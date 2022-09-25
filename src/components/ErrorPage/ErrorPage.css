@@ -96,6 +96,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .error-face-and-bubble-container {
+    margin-top: 0;
+  }
+
   .error-wilson {
     width: 50%;
   }
@@ -129,7 +133,15 @@
   }
 
   .error-container-for-button {
-    top: 51%;
-    right: 8%;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
+  /* .error-go-to-movies-button {
+    height: 2em;
+    width: 100%;
+    border-radius: 20px;
+  } */
 }

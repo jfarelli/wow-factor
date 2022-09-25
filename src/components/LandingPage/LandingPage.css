@@ -110,7 +110,9 @@
 
 @media screen and (max-width: 400px) {
   .container-for-button {
-    top: 51%;
-    right: 8%;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
