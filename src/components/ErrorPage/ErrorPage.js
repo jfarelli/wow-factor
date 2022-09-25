@@ -1,6 +1,6 @@
 import "./ErrorPage.css";
 import React from "react";
-import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson-surprise.webp";
+import wilson from "../../assets/wilson-surprise.webp";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {

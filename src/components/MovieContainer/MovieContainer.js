@@ -10,7 +10,6 @@ const MovieContainer = ({
   // videos,
   displaySingleMovie,
 }) => {
-  // const sortedMovies = movies.sort((a, b) => b.year - a.year);
   const sortedMovies = movies.sort((a, b) => {
     let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
     if ( first < second){
@@ -20,7 +19,6 @@ const MovieContainer = ({
       return 1
     }
   });
-// console.log('SORTED YEAR: ', sorted)
   const movieCards = !wows.length
     ? sortedMovies.map((movie) => {
         return (

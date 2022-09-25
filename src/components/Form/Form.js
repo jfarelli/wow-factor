@@ -10,7 +10,6 @@ const Form = ({
   displayWowCount,
   singleMovie,
 }) => {
-  // const sortedMovies = movies.sort((a, b) => a.moive - b.movie);
   const sortedMovies = movies.sort((a, b) => {
     let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
     if ( first < second){
@@ -20,9 +19,7 @@ const Form = ({
       return 1
     }
   });
-  // console.log('SORTED: ', sortedMovies)
   const dropdownTitles = sortedMovies.map((movie) => {
-    // console.log('MOVIE.MOVIE: ', movie.movie)
     return (
       <option
         key={movie.timestamp}
@@ -41,7 +38,6 @@ const Form = ({
   const handleWowChange = (e) => {
     displayWowCount(e.target.value);
   };
-
   return (
     <form>
       <div className="button-container">

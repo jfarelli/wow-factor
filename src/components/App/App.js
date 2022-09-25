@@ -12,7 +12,7 @@ import { Switch, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [videos, setVideos] = useState([]);
-  const [singleMovie, setSingleMovie] = useState("");
+  const [singleMovie, setSingleMovie] = useState([]);
   const [wows, setWows] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,16 @@ const App = () => {
       setVideos(movieClips);
     });
   }, []);
+
+  const sortedMovies = movies.sort((a, b) => {
+    let first = a.movie.toLowerCase(), second = b.movie.toLowerCase();
+    if ( first < second){
+      return -1
+    }
+    if (first > second ) {
+      return 1
+    }
+  });
 
   const displaySingleMovie = (movieTitle) => {
     const moviePick = movies.find((movie) => movie.movie === movieTitle);
@@ -51,7 +61,7 @@ const App = () => {
           exact
           path="/"
           render={() => (
-            <LandingPage singleMovie={singleMovie} setWows={setWows} />
+            <LandingPage setSingleMovie={setSingleMovie} setWows={setWows} />
           )}
         />
         <Route

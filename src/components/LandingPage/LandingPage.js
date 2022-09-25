@@ -1,6 +1,6 @@
 import "./LandingPage.css";
 import React from "react";
-import wilson from "/Users/jordanfarelli/turing/mod3/projects/wow-factor/src/assets/wilson.jpeg";
+import wilson from "../../assets/wilson.jpeg";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -9,7 +9,6 @@ const LandingPage = ({ setSingleMovie, setWows }) => {
     setSingleMovie("");
     setWows([]);
   };
-
   return (
     <div className="landing-page-container">
       <div className="face-and-bubble-container">
@@ -21,7 +20,7 @@ const LandingPage = ({ setSingleMovie, setWows }) => {
       </div>
       <div className="container-for-button">
         <Link to={`/movies`}>
-          <button className="go-to-movies-button" onClick={() => handleClick}>
+          <button className="go-to-movies-button" onClick={() => handleClick()}>
             Show Me The Wilson
           </button>
         </Link>
@@ -33,6 +32,6 @@ const LandingPage = ({ setSingleMovie, setWows }) => {
 export default LandingPage;
 
 LandingPage.propTypes = {
-  setSingleMovie: PropTypes.func,
-  setWows: PropTypes.func,
+  setSingleMovie: PropTypes.func.isRequired,
+  setWows: PropTypes.func.isRequired,
 };

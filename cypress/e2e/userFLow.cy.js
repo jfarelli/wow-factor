@@ -167,14 +167,15 @@ describe("User Flow", () => {
       .click()
       .url()
       .should("eq", "http://localhost:3000/details")
-      .get('.movie-title-dropdown')
-      // .select("The Internship")
+      .get(".movie-title-dropdown");
+    // .select("The Internship")
   });
 
   it("should redirect the user to an error page when the page fails to load", () => {
     cy.visit("http://localhost:3000/blah")
-      .get(".error-page-container").should('exist')
-      .get('.error-face-and-bubble-container')
+      .get(".error-page-container")
+      .should("exist")
+      .get(".error-face-and-bubble-container")
       .contains("Wooow! Something went wrong!")
       .get(".error-go-to-movies-button")
       .click()

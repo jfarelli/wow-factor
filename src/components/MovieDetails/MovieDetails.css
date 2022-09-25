@@ -1,11 +1,11 @@
 iframe {
-  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);  
+  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
 }
 
 p {
   margin: 10px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 .movie-details-container {
@@ -13,8 +13,6 @@ p {
   align-items: center;
   justify-content: space-around;
   padding: 2%;
-  /* height: 100%; */
-  /* width: 100%; */
   margin-top: 8%;
 }
 
