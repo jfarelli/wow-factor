@@ -27,7 +27,7 @@ const MovieDetails = ({ movie }) => {
             <b>{movie.current_wow_in_movie}</b> "WOW"'s at Clip
           </p>
           <p>
-            <b>{movie.total_wows_in_movie}</b> "WOW"'s Total in the Movie
+            <b>{movie.total_wows_in_movie}</b> Total "WOW"'s in the Movie
           </p>
         </div>
       </div>

@@ -53,11 +53,13 @@ https://user-images.githubusercontent.com/97558758/192123286-6ed3fa99-84f0-41de-
 
 ### Challenges & Reflections: <a name="challenges"></a>
 * Spearheading a solo project is always a little intimidating at first, but looking back to where I started, the ups and downs throughout, and now seeign the completion of this project brings great joy and supreme sense of accomplishment. 
+* This project helped me further solidify my understanding of the React framework and proper structuring of components.
 
 <br>
 
 ### Future Iterations: <a name="future"></a>
-* What would you like to do to the project in the future?
+* Creating a URL link to where a selected movie can be streamed, or rented online.
+* Creating functionality to display light & dark modes via Global State Management.
 
 <br>
 

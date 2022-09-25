@@ -119,10 +119,10 @@ describe("User Flow", () => {
       .should("contain", "Line:")
       .get("p")
       .eq(2)
-      .should("contain", "'Wow' Count at Clip:")
+      .should("contain", '"WOW"\'s at Clip')
       .get("p")
       .eq(3)
-      .should("contain", "Total 'Wow' Count in Movie:");
+      .should("contain", "\"WOW\"'s in the Movie");
   });
 
   it('Should filter movies by total "Wow" Count', () => {
@@ -155,10 +155,10 @@ describe("User Flow", () => {
       .should("contain", 'Line: "Wow."')
       .get("p")
       .eq(2)
-      .should("contain", "'Wow' Count at Clip: 1")
+      .should("contain", '"WOW"\'s at Clip')
       .get("p")
       .eq(3)
-      .should("contain", "Total 'Wow' Count in Movie: 2");
+      .should("contain", "\"WOW\"'s in the Movie");
   });
 
   it("Should be able to select another movie from the dropdown and be shown that movie's details", () => {
