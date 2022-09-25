@@ -27,7 +27,7 @@
   justify-content: center;
   background-color: #c1d5e0;
   width: 100%;
-  margin-left: 1.5%;
+  /* margin-left: 1.5%; */
   border-radius: 0.5em 0.5em 0.5em 0;
   font-size: 2.25em;
   box-shadow: 3px 3px 5px 3px black;
@@ -39,7 +39,7 @@
 .error-container-for-button {
   position: absolute;
   top: 50%;
-  right: 23%;
+  right: 25%;
 }
 
 .error-go-to-movies-button {
@@ -133,15 +133,15 @@
   }
 
   .error-container-for-button {
-    position: fixed;
+    /* position: fixed; */
     top: 65%;
-    left: 50%;
+    /* right: 0%; */
     transform: translate(-50%, -50%);
   }
 
-  /* .error-go-to-movies-button {
-    height: 2em;
-    width: 100%;
-    border-radius: 20px;
-  } */
+  .error-go-to-movies-button {
+    height: 1.5em;
+    font-size: 1.25rem;
+    width: 150%;
+  }
 }
