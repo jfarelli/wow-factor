@@ -135,8 +135,8 @@
   .error-container-for-button {
     /* position: fixed; */
     top: 85%;
-    /* right: 0%; */
-    transform: translate(-50%, -50%);
+    right: 25%;
+    /* transform: translate(-50%, -50%); */
   }
 
   .error-go-to-movies-button {

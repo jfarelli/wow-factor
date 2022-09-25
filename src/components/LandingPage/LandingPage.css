@@ -118,8 +118,9 @@
   .container-for-button {
     /* position: fixed; */
     top: 85%;
+    right: 25%;
     /* left: 50%; */
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
   }
 
   .go-to-movies-button {
