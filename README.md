@@ -2,6 +2,8 @@
 
 ## The app that answers the question: "How many times did Owen Wilson say "Wooow!" in that movie???
 
+<br>
+
 ### Table of contents
 * [How To Use](#how)
 * [Challenges](#challenges)
@@ -9,12 +11,41 @@
 * [Technologies Used](#tech)
 * [Contributors](#contributors)
 
+<br>
+
 ### How To Use: <a name="how"></a>
 
+**USER FLOW**
 * Please visit my app: 
 
-* Descripe clip
-Clip
+* Landing Page to Movies Page
+
+https://user-images.githubusercontent.com/97558758/192111839-d028eb42-caba-4d4b-896a-5a7287d67dfb.mov
+
+* Movies Page to Landing Page
+
+https://user-images.githubusercontent.com/97558758/192111879-fbd0f02d-b366-43ce-9005-e56eeb17f4cf.mov
+
+* Random Movie Button Functionality
+
+https://user-images.githubusercontent.com/97558758/192123259-6fdfb103-50e3-45b6-af1a-b567a1078513.mov
+
+* Filter movies by WOW Count
+
+https://user-images.githubusercontent.com/97558758/192123262-7182a5ba-8377-41bf-a0e1-e7eda6a2ad05.mov
+
+* Select a Different Movie from the Dropdown
+
+https://user-images.githubusercontent.com/97558758/192123269-8430177f-dee4-418c-a7e7-38e3dd4f0364.mov
+
+
+<br>
+
+**ERROR HANDLING**
+* Bad URL
+
+https://user-images.githubusercontent.com/97558758/192123286-6ed3fa99-84f0-41de-8a1d-99eebf62ccef.mov
+
 
 <br>
 
