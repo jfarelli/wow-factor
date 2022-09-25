@@ -15,9 +15,12 @@
 
 ### How To Use: <a name="how"></a>
 
-**USER FLOW**
-* Please visit my app: [WOW-FACTOR](https://wow-factor.vercel.app/)
+* Please visit my app [WOW-FACTOR](https://wow-factor.vercel.app/) and click around!
+* Filter by the number of "WOW"'s in each movie, click a movie for details, or check out a random flick!
 
+<br>
+
+**USER FLOW**
 * Landing Page to Movies Page
 
 https://user-images.githubusercontent.com/97558758/192111839-d028eb42-caba-4d4b-896a-5a7287d67dfb.mov
