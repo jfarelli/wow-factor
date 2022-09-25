@@ -1,3 +1,7 @@
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false
+})
+
 describe("User Flow", () => {
   beforeEach(() => {
     cy.intercept(
@@ -186,8 +190,12 @@ describe("User Flow", () => {
       .get("option")
       .eq(5)
       .should("contain", 'The Internship')
-      // .get('select')
-      // .select("The Internship") // Does not recognize the value...
+      .get('select')
+      .select("The Internship")
+      .should('have.value', 'The Internship')
+      .get('select')
+      .select("The Haunting")
+      .should('have.value', 'The Haunting')
   });
 
   it("should redirect the user to an error page when the page fails to load", () => {

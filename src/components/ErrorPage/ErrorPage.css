@@ -134,7 +134,7 @@
 
   .error-container-for-button {
     /* position: fixed; */
-    top: 65%;
+    top: 85%;
     /* right: 0%; */
     transform: translate(-50%, -50%);
   }
