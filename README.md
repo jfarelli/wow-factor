@@ -16,7 +16,7 @@
 ### How To Use: <a name="how"></a>
 
 **USER FLOW**
-* Please visit my app: 
+* Please visit my app: [WOW-FACTOR](https://wow-factor.vercel.app/)
 
 * Landing Page to Movies Page
 
