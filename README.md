@@ -16,8 +16,19 @@
 
 ### How To Use: <a name="how"></a>
 
+**For the casual user:**
 * Please visit my app [WOW-FACTOR](https://wow-factor.vercel.app/) and click around!
 * Filter by the number of "WOW"'s in each movie, click a movie for details, or check out a random flick!
+
+<br>
+
+**For the developers out there:**
+* `Fork` this repository and `Clone` it down to your local machine
+* `cd` into the repository
+* Once in the repository, run `npm install`
+* After installation, run `npm start`
+* The app should now open up on your default browser with the URL `http://localhost:3000`
+* You're now ready to move through the app!
 
 <br>
 
