@@ -12,7 +12,7 @@ const MovieDetails = ({ singleMovie }) => {
             src={singleMovie.video["1080p"]}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
+            // allowFullScreen
             title="YouTube Video"
             width="640"
             height="360"
