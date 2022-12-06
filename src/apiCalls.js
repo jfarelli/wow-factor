@@ -1,7 +1,7 @@
 const fetchWows = async (pathAddress) => {
   try {
     const response = await fetch(
-      `https://owen-wilson-wow-api.herokuapp.com/wows/${pathAddress}`
+      `https://owen-wilson-wow-api.onrender.com/wows/${pathAddress}`
     );
     const json = await response.json();
     return json;

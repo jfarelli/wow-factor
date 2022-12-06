@@ -13,9 +13,9 @@ const LandingPage = ({ setSingleMovie, setWows }) => {
     <div className="landing-page-container">
       <div className="face-and-bubble-container">
         <img src={wilson} className="wilson" alt='face'/>
-        <div className="bubble">
+        <div className="bubble" data-testid="bubble-display">
           Wooow! <br></br>Thanks for stopping by! <br></br>What do you say we
-          check out some movies?! <br></br>...Where I say 'Wooow!"
+          check out some movies?! <br></br>...Where I say "Wooow!"
         </div>
       </div>
       <div className="container-for-button">

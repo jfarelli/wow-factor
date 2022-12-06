@@ -1,13 +1,13 @@
-import "./App.css";
-import Nav from "../Nav/Nav";
-import Footer from "../Footer/Footer";
-import MovieContainer from "../MovieContainer/MovieContainer";
-import MovieDetails from "../MovieDetails/MovieDetails";
-import LandingPage from "../LandingPage/LandingPage";
-import ErrorPage from "../ErrorPage/ErrorPage";
-import fetchWows from "../../apiCalls";
-import { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import './App.css';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
+import MovieContainer from '../MovieContainer/MovieContainer';
+import MovieDetails from '../MovieDetails/MovieDetails';
+import LandingPage from '../LandingPage/LandingPage';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import fetchWows from '../../apiCalls';
+import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -15,7 +15,7 @@ const App = () => {
   const [wows, setWows] = useState([]);
 
   useEffect(() => {
-    fetchWows("random?results=100").then((wow) => {
+    fetchWows('random?results=100').then((wow) => {
       const newMovieArray = wow.map((movie) => [movie.movie, movie]);
       const newMap = new Map(newMovieArray);
       const iterator = newMap.values();
@@ -54,18 +54,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <Switch>
+      <Routes>
         <Route
-          exact
           path="/"
-          render={() => (
+          element={
             <LandingPage setSingleMovie={setSingleMovie} setWows={setWows} />
-          )}
+          }
         />
         <Route
-          exact
           path="/movies"
-          render={() => (
+          element={
             <div className="nav-and-moviecontainer">
               <Nav
                 displaySingleMovie={displaySingleMovie}
@@ -81,13 +79,12 @@ const App = () => {
                 sortedMovies={sortedMovies}
               />
             </div>
-          )}
+          }
         />
 
         <Route
-          exact
           path="/details"
-          render={() => (
+          element={
             <div>
               <Nav
                 displaySingleMovie={displaySingleMovie}
@@ -99,17 +96,17 @@ const App = () => {
               />
               <MovieDetails singleMovie={singleMovie} />
             </div>
-          )}
+          }
         />
         <Route
           path="*"
-          render={() => (
+          element={
             <div>
               <ErrorPage />
             </div>
-          )}
+          }
         />
-      </Switch>
+      </Routes>
       <Footer />
     </div>
   );

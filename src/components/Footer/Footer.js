@@ -1,6 +1,6 @@
-import "./Footer.css";
-import React from "react";
-import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import './Footer.css';
+import React from 'react';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,6 +8,7 @@ const Footer = () => {
       <div className="personContainer">
         <p className="name">Jordan Farelli</p>
         <a
+          title="linkedin"
           name="linkedin"
           className="linkedin-anchor"
           href="https://www.linkedin.com/in/jordan-farelli/"
@@ -15,6 +16,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
         <a
+          title="github"
           name="linkedin"
           className="github-anchor"
           href="https://github.com/jfarelli"
