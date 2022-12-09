@@ -48,8 +48,7 @@ const MovieDetails = ({ singleMovie }) => {
 export default MovieDetails;
 
 MovieDetails.propTypes = {
-  singleMovie: PropTypes.arrayOf(
-    PropTypes.shape({
+  singleMovie: PropTypes.shape({
       audio: PropTypes.string.isRequired,
       character: PropTypes.string.isRequired,
       current_wow_in_movie: PropTypes.number.isRequired,
@@ -64,5 +63,4 @@ MovieDetails.propTypes = {
       video: PropTypes.object.isRequired,
       year: PropTypes.number.isRequired,
     })
-  ),
 };

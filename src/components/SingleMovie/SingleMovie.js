@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const SingleMovie = ({ id, title, poster, displaySingleMovie }) => {
+  console.log(id, title, poster)
   return (
     <div className="single-movie-container">
       <Link to={`/details`}>
