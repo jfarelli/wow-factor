@@ -12,6 +12,8 @@
 * [Technologies Used](#tech)
 * [Contributors](#contributors)
 
+jordanfarelli@gmail.com
+
 <br>
 
 ### How To Use: <a name="how"></a>
