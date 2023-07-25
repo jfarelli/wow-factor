@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MovieDetails = ({ singleMovie }) => {
+    console.log('singleMovie: ', singleMovie);
 	return (
 		<div
 			data-testid="movie-details"
