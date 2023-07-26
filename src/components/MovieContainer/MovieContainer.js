@@ -4,7 +4,6 @@ import SingleMovie from '../SingleMovie/SingleMovie';
 import PropTypes from 'prop-types';
 
 const MovieContainer = ({ wows, sortedMovies, displaySingleMovie }) => {
-	// console.log('wows', wows)
 	const movieCards = !wows.length
 		? sortedMovies.map((movie) => {
 				return (
@@ -16,7 +15,7 @@ const MovieContainer = ({ wows, sortedMovies, displaySingleMovie }) => {
 						displaySingleMovie={displaySingleMovie}
 					/>
 				);
-		})
+		  })
 		: wows.map((movie) => {
 				return (
 					<SingleMovie
@@ -27,7 +26,7 @@ const MovieContainer = ({ wows, sortedMovies, displaySingleMovie }) => {
 						displaySingleMovie={displaySingleMovie}
 					/>
 				);
-		});
+		  });
 
 	return <div className="movie-card-collection">{movieCards}</div>;
 };

@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MovieDetails = ({ singleMovie }) => {
-    console.log('singleMovie: ', singleMovie);
 	return (
 		<div
 			data-testid="movie-details"
@@ -19,26 +18,24 @@ const MovieDetails = ({ singleMovie }) => {
 				<div className="iframe-wrapper">
 					<iframe
 						src={singleMovie.video['1080p']}
-						frameBorder="0"
 						allow="autoplay; fullscreen; picture-in-picture"
-						// allowFullScreen
 						title="YouTube Video"
 						width="640"
 						height="360"
 					/>
 				</div>
 				<div className="movie-details">
-					<p>
-						Character: <b>{singleMovie.character}</b>
+					<p style={{ marginBottom: '3.5%' }}>
+						<b>
+							<u>WOW Count in {singleMovie.movie}</u>
+						</b>
 					</p>
 					<p>
-						Line: <b>"{singleMovie.full_line}"</b>
+						WOW's at Clip ({singleMovie.timestamp}):{' '}
+						<b>{singleMovie.current_wow_in_movie}</b>
 					</p>
 					<p>
-						<b>{singleMovie.current_wow_in_movie}</b> "WOW"'s at Clip
-					</p>
-					<p>
-						<b>{singleMovie.total_wows_in_movie}</b> Total "WOW"'s in the Movie
+						Total WOW's: <b>{singleMovie.total_wows_in_movie}</b>
 					</p>
 				</div>
 			</div>

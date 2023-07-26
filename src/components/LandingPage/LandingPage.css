@@ -1,129 +1,135 @@
 .landing-page-container {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  background-color: #62757f;
-  padding: 1%;
-  overflow: hidden;
+	height: 100vh;
+	background-color: #62757f;
+	display: flex;
+	justify-content: center;
 }
 
 .face-and-bubble-container {
-  display: flex;
-  align-items: center;
-  margin-top: 10%;
+	display: flex;
+	align-items: center;
+	margin-top: 10%;
+}
+
+.wilson-img-container {
+	width: 100%;
 }
 
 .wilson {
-  border-radius: 50px;
-  box-shadow: 0 0 25px rgb(0, 0, 0);
-  margin-left: 1.5%;
+	border-radius: 50px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	margin-left: 5%;
+}
+
+.img-button-div-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+	transform: translateX(-5%);
 }
 
 .bubble {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #c1d5e0;
-  width: 100%;
-  margin-left: 1.5%;
-  border-radius: 0.5em 0.5em 0.5em 0;
-  font-size: 2.25em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 5px 3px black;
-  padding: 10px;
-  transform: translateY(-8em);
+	background-color: #ebf4fb;
+	/* box-shadow: 0 0 25px red; */
+	padding: 10px;
+	border-radius: 20px;
+	/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+	margin-bottom: -10%;
 }
 
-.container-for-button {
-  position: absolute;
-  top: 50%;
-  right: 25%;
+.bubble:before {
+	content: '';
+	position: absolute;
+	bottom: 0.75%;
+	left: -1.75%;
+	border-style: solid;
+	border-width: 0 10px 15px 10px;
+	border-color: transparent transparent #ebf4fb transparent;
 }
 
 .go-to-movies-button {
-  height: 2em;
-  width: 100%;
-  border-radius: 20px;
-  border: none;
-  font-size: 1.25em;
-  cursor: pointer;
-  background-color: #bd3b40;
-  color: #fafafa;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+	height: 2em;
+	width: 40%;
+	border-radius: 10px;
+	border: none;
+	font-size: 1.25em;
+	cursor: pointer;
+	background-color: #9fbbcd;
+	color: #333;
+	font-weight: 600;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	transition: 0.2s ease-in-out;
 }
 
 .go-to-movies-button:hover {
-  background-color: #c8353a;
-  box-shadow: 0 0 15px rgb(0, 0, 0);
-}
-
-.go-to-movies-button:active {
-  background-color: #d03439;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+	background-color: #a0bed0;
+	color: #d03439;
+	box-shadow: 0 0 7px black;
 }
 
 @media screen and (max-width: 1500px) {
-  .wilson {
-    width: 75%;
-  }
+	.wilson {
+		width: 75%;
+	}
 
-  .bubble {
-    width: 90%;
-    margin-left: 2.5%;
-    margin-right: 1.5%;
-    font-size: 2.25em;
-    transform: translateY(-6em);
-  }
+	.bubble {
+		width: 90%;
+		margin-left: 2.5%;
+		margin-right: 1.5%;
+		font-size: 2.25em;
+		transform: translateY(-6em);
+	}
 
-  .container-for-button {
-    right: 22%;
-  }
+	.container-for-button {
+		right: 22%;
+	}
 }
 
 @media screen and (max-width: 1200px) {
-  .container-for-button {
-    right: 18%;
-  }
+	.container-for-button {
+		right: 18%;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .wilson {
-    width: 50%;
-  }
+	.wilson {
+		width: 50%;
+	}
 
-  .bubble {
-    margin-left: 2.5%;
-    margin-right: 1.5%;
-    font-size: 1em;
-  }
+	.bubble {
+		margin-left: 2.5%;
+		margin-right: 1.5%;
+		font-size: 1em;
+	}
 
-  .container-for-button {
-    right: 13%;
-  }
+	.container-for-button {
+		right: 13%;
+	}
 
-  .go-to-movies-button {
-    height: 1.55em;
-    font-size: 0.85em;
-  }
+	.go-to-movies-button {
+		height: 1.55em;
+		font-size: 0.85em;
+	}
 }
 
 @media screen and (max-width: 400px) {
-  .wilson {
-    width: 45%;
-  }
+	.wilson {
+		width: 45%;
+	}
 
-  .bubble {
-    box-shadow: 1px 1px 2px 1px black;
-  }
+	.bubble {
+		box-shadow: 1px 1px 2px 1px black;
+	}
 
-  .container-for-button {
-    top: 80%;
-    right: 38%;
-  }
+	.container-for-button {
+		top: 80%;
+		right: 38%;
+	}
 
-  .go-to-movies-button {
-    height: 1.5em;
-    font-size: 1.25rem;
-    width: 150%;
-  }
+	.go-to-movies-button {
+		height: 1.5em;
+		font-size: 1.25rem;
+		width: 150%;
+	}
 }

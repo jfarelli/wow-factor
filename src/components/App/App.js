@@ -13,7 +13,7 @@ const App = () => {
 	const [movies, setMovies] = useState([]);
 	const [singleMovie, setSingleMovie] = useState([]);
 	const [wows, setWows] = useState([]);
-    
+	// const [wowSound, setWowSound] = useState([]);
 
 	useEffect(() => {
 		fetchWows('random?results=100').then((wow) => {
@@ -41,9 +41,10 @@ const App = () => {
 		setSingleMovie(moviePick);
 	};
 
+	const getRandomMovie = movies[Math.floor(Math.random() * movies.length)];
+
 	const randomize = () => {
-		const getRandom = movies[Math.floor(Math.random() * movies.length)];
-		setSingleMovie(getRandom);
+		setSingleMovie(getRandomMovie);
 	};
 
 	const displayWowCount = (wowCount) => {
@@ -51,6 +52,11 @@ const App = () => {
 			(movie) => movie.total_wows_in_movie === parseInt(wowCount)
 		);
 		setWows(wowPicks);
+	};
+
+	const playSound = () => {
+		const audio = new Audio(getRandomMovie.audio);
+		audio.play();
 	};
 
 	return (
@@ -73,6 +79,7 @@ const App = () => {
 								setSingleMovie={setSingleMovie}
 								sortedMovies={sortedMovies}
 								wows={wows}
+								playSound={playSound}
 							/>
 							<MovieContainer
 								wows={wows}
@@ -94,8 +101,9 @@ const App = () => {
 								singleMovie={singleMovie}
 								sortedMovies={sortedMovies}
 								wows={wows}
+								playSound={playSound}
 							/>
-							<MovieDetails singleMovie={singleMovie} />
+							{singleMovie && <MovieDetails singleMovie={singleMovie} />}
 						</div>
 					}
 				/>

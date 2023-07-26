@@ -1,87 +1,85 @@
 iframe {
-  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);	border-radius: 10px;
 }
 
 p {
-  margin: 10px;
-  letter-spacing: 0.05em;
+	margin: 10px;
+	letter-spacing: 0.05em;
 }
 
 .movie-details-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2%;
-  margin-top: 8%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 2%;
+	margin-top: 7.25%;
 }
 
 .poster-img {
-  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  width: 25%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);	border-radius: 10px;
+	width: 28%;
 }
 
 .trailer-and-details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .movie-details {
-  text-align: center;
-  background-color: #bd3b40;
-  color: #fafafa;
-  width: 60%;
-  margin-top: 1%;
-  border-radius: 10px;
-  box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.7);
-}
+	text-align: center;
+	background-color: #9fbbcd;
+	color: #333;
+	width: 90%;
+    font-size: 1.25em;
+	margin-top: 5%;
+	border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
 
 @media screen and (max-width: 600px) {
-  p {
-    margin: 5px;
-  }
+	p {
+		margin: 5px;
+	}
 
-  iframe {
-    height: 100%;
-    width: 100%;
-  }
+	iframe {
+		height: 100%;
+		width: 100%;
+	}
 
-  .movie-details {
-    font-size: 0.5em;
-    width: 80%;
-  }
+	.movie-details {
+		font-size: 0.5em;
+		width: 80%;
+	}
 
-  .movie-details-container {
-    flex-direction: column;
-    margin-top: 28%;
-  }
+	.movie-details-container {
+		flex-direction: column;
+		margin-top: 28%;
+	}
 
-  .poster-img {
-    width: 35%;
-    margin-bottom: 7%;
-  }
-  
-  .movie-details {
-    width: 70%;
-    margin-top: 6%;
-  }
+	.poster-img {
+		width: 35%;
+		margin-bottom: 7%;
+	}
+
+	.movie-details {
+		width: 70%;
+		margin-top: 6%;
+	}
 }
 
 @media screen and (max-width: 400px) {
-  .movie-details-container {
-    flex-direction: column;
-    margin-top: 25%;
-  }
+	.movie-details-container {
+		flex-direction: column;
+		margin-top: 25%;
+	}
 
-  .poster-img {
-    width: 35%;
-    margin-bottom: 7%;
-  }
+	.poster-img {
+		width: 35%;
+		margin-bottom: 7%;
+	}
 
-  .movie-details {
-    width: 70%;
-    margin-top: 6%;
-  }
+	.movie-details {
+		width: 70%;
+		margin-top: 6%;
+	}
 }

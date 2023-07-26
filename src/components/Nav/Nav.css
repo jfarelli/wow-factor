@@ -1,72 +1,73 @@
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 15%;
-  width: 100%;
-  background-color: #62757f;
-  padding: 0.5%;
-  box-shadow: 0 0 5px rgb(0, 0, 0);
-  position: fixed;
-  top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 15%;
+	width: 100%;
+	background-color: #62757f;
+	padding: 0.5%;
+	box-shadow: 0 0 5px rgb(0, 0, 0);
+	position: fixed;
+	top: 0;
+    z-index: 9999;
 }
 
 .wilson-face-and-bubble-container {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  height: 100%;
+	display: flex;
+	align-items: center;
+	width: 80%;
+	height: 100%;
 }
 
 .wilson-face {
-  height: 90%;
-  border-radius: 50px;
-  margin-left: 0.5%;
-  box-shadow: 0 0 5px rgb(0, 0, 0);
+	height: 90%;
+	border-radius: 50px;
+	margin-left: 0.5%;
+	box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .wow-bubble {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #c1d5e0;
-  height: 50%;
-  width: 35%;
-  margin-bottom: 6%;
-  margin-left: 1.5%;
-  border-radius: 0.5em 0.5em 0.5em 0;
-  font-size: 200%;
-  box-shadow: 3px 3px 5px 3px black;
-  padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #c1d5e0;
+	height: 50%;
+	width: 35%;
+	margin-bottom: 6%;
+	margin-left: 1.5%;
+	border-radius: 0.5em 0.5em 0.5em 0;
+	font-size: 200%;
+	box-shadow: 0 0 5px rgb(0, 0, 0);
+	padding: 5px;
 }
 
 @media screen and (max-width: 600px) {
-  .wilson-face {
-    height: 80%;
-  }
+	.wilson-face {
+		height: 80%;
+	}
 
-  .wow-bubble {
-    height: 35%;
-    width: 7em;
-    margin-bottom: 12%;
-    margin-left: 1.5%;
-  }
+	.wow-bubble {
+		height: 35%;
+		width: 7em;
+		margin-bottom: 12%;
+		margin-left: 1.5%;
+	}
 }
 
 @media screen and (max-width: 400px) {
-  .nav-container {
-    height: 10%;
-  }
+	.nav-container {
+		height: 10%;
+	}
 
-  .wilson-face-and-bubble-container {
-    width: 50%;
-    height: 80%;
-  }
+	.wilson-face-and-bubble-container {
+		width: 50%;
+		height: 80%;
+	}
 
-  .wow-bubble {
-    height: 40%;
-    font-size: 125%;
-    margin-top: -7%;
-    box-shadow: 1px 1px 2px 1px black;
-  }
+	.wow-bubble {
+		height: 40%;
+		font-size: 125%;
+		margin-top: -7%;
+		box-shadow: 1px 1px 2px 1px black;
+	}
 }

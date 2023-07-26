@@ -10,12 +10,18 @@ const Nav = ({
 	randomize,
 	singleMovie,
 	sortedMovies,
+	playSound,
 }) => {
 	return (
 		<div className="nav-container">
 			<div className="wilson-face-and-bubble-container">
 				<img src={wilson} alt="wilson-face" className="wilson-face" />
-				<div className="wow-bubble">Wooooooow!</div>
+				<div
+					onMouseOver={() => playSound(singleMovie.audio)}
+					className="wow-bubble"
+				>
+					Wooooooow!
+				</div>
 			</div>
 			<Form
 				displaySingleMovie={displaySingleMovie}
