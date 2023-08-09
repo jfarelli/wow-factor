@@ -1,10 +1,11 @@
 iframe {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);;
+	border-radius: 10px;
 }
 
 p {
 	margin: 10px;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.025em;
 }
 
 .movie-details-container {
@@ -16,7 +17,8 @@ p {
 }
 
 .poster-img {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
 	width: 28%;
 }
 
@@ -31,10 +33,17 @@ p {
 	background-color: #9fbbcd;
 	color: #333;
 	width: 90%;
-    font-size: 1.25em;
+	font-size: 1.25em;
 	margin-top: 5%;
 	border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wow-count {
+	/* color: rgba(208, 52, 57, 0.9); */
+	-webkit-text-stroke: 0.25px #d03439;
+	margin-bottom: 0;
+}
 
 @media screen and (max-width: 600px) {
 	p {

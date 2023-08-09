@@ -20,7 +20,7 @@ form {
 	font-size: 1rem;
 	font-weight: 600;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	transition: 0.2s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 
 .home-button,
@@ -37,8 +37,10 @@ form {
 .wow-count-dropdown:hover,
 .movie-title-dropdown:hover {
 	background-color: #a0bed0;
-	color: #d03439;
-	box-shadow: 0 0 7px rgb(0, 0, 0);
+	/* color: #d03439; */
+    -webkit-text-stroke: .25px #d03439;
+	/* box-shadow: 0 0 7px rgb(0, 0, 0); */
+    box-shadow: 0 0 10px rgba(208, 52, 57, 0.9);
 }
 
 .dropdown-container {

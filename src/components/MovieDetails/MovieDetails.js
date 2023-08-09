@@ -26,8 +26,7 @@ const MovieDetails = ({ singleMovie }) => {
 				</div>
 				<div className="movie-details">
 					<p style={{ marginBottom: '3.5%' }}>
-						<b>
-							<u>WOW Count in {singleMovie.movie}</u>
+						<b className='wow-count'>WOW Count in {singleMovie.movie}
 						</b>
 					</p>
 					<p>
